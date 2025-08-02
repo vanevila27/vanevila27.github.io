@@ -1,0 +1,83 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0%;
+    padding: 0%;
+    color: #e4b3b3;
+
+}
+
+header {
+    background-color: #fafafa;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+}
+
+
+#cronometro {
+    background-color: #f7f7f7;
+    padding: 1em;
+    text-align: center;
+}
+
+#contador {
+    font-size: 48px;
+    font-weight: bold;
+}
+
+#ubicacion {
+    background-color: #f7f7f7;
+    padding: 1em;
+}
+
+#mapa {
+    height: 400px;
+    width: 100%;
+    border: 1px solid #ddd;
+}
+.a href {
+    text-decoration: none;
+    top: 50%;
+    color: #fff;
+}
+.portada {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* ajusta la altura a la pantalla */
+  background-color: #e4b3b3;
+}
+
+.portada img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* ajusta el tamaño de la imagen */
+}
+
+.titulo-novios {
+  position: absolute;
+  top: 40%; /* ajusta la posición del texto */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Great Vibes', cursive;
+  font-size: 40px;
+  color: #1d0101;
+  text-align: center;
+}
+
+button {
+  position: absolute;
+  bottom: 20px; /* ajusta la posición del botón */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff;
+  color: #420b0b;
+  border: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+}
+.subtitulo {
+  font-size: 20px;
+  color: #080808;
+  display: block; /* para que el subtítulo esté en una línea separada */
+}
