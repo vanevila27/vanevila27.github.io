@@ -54,30 +54,42 @@ header {
 }
 
 .titulo-novios {
-  position: absolute;
-  top: 40%; /* ajusta la posición del texto */
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-family: 'Great Vibes', cursive;
+  font-family:great vibes, cursive;
   font-size: 40px;
-  color: #1d0101;
-  text-align: center;
+  color: #0a0000;
 }
 
-button {
+.subtitulo {
+  font-family:playfair display, serif;
+  font-size: 20px;
+  color: #610606;
+  display: block; /* para que el subtítulo esté en una línea separada */
+}
+.titulo-container {
   position: absolute;
-  bottom: 20px; /* ajusta la posición del botón */
+  top: 50%; /* ajusta la posición del contenedor */
   left: 50%;
-  transform: translateX(-50%);
-  background-color: #fff;
-  color: #420b0b;
-  border: none;
-  padding: 10px 20px;
-  font-size: 18px;
-  cursor: pointer;
+  transform: translate(-50%, -50%);
+  text-align: center;
+ 
+}
+button {
+background-color: #820ac7;
+color: thistle;
+border: none;
+padding: 10px 20px;
+font-size: 18px;
+cursor: pointer;
+margin-top: 20px; /* espacio entre el botón y el título */
 }
 .subtitulo {
   font-size: 20px;
   color: #080808;
   display: block; /* para que el subtítulo esté en una línea separada */
+}
+
+.cronometro {
+    font-size: 24px;
+    font-weight: bold;
+    color: #420b0b;
 }
