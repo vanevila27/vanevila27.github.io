@@ -8,8 +8,7 @@ body {
 
 header {
     background-color: #fafafa;
-    color: #420b0b;
-;
+    color: #fff;
     padding: 1em;
     text-align: center;
 }
@@ -19,6 +18,7 @@ header {
     background-color: #530202;
     padding: 1em;
     text-align: center;
+    display: block
 }
 
 #contador {
@@ -32,8 +32,8 @@ header {
 }
 
 #mapa {
-    height: auto;
-    width: 50%;
+    height: 400px;
+    width: 80%;
     border: 1px solid #ddd;
 }
 .a href {
@@ -89,9 +89,17 @@ margin-top: 20px; /* espacio entre el botón y el título */
   display: block; /* para que el subtítulo esté en una línea separada */
 }
 
-.cronometro {
-    font-size: 24px;
+.contador {
+    font-size: 48px;
     font-weight: bold;
-    color: #420b0b;
+    color: #110505;
 }
 
+.informacion {
+    background-color: #7c0404;
+    padding: 1em; /* espacio alrededor del contenido */
+    font-size: 18x; /* tamaño de fuente */
+    font-family: arial, sans-serif; /* tipo de letra */
+    text-align: center; /* centrado del texto */
+    
+}
