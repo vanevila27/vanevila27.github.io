@@ -8,7 +8,8 @@ body {
 
 header {
     background-color: #fafafa;
-    color: #fff;
+    color: #420b0b;
+;
     padding: 1em;
     text-align: center;
 }
@@ -31,8 +32,8 @@ header {
 }
 
 #mapa {
-    height: 400px;
-    width: 100%;
+    height: auto;
+    width: 50%;
     border: 1px solid #ddd;
 }
 .a href {
@@ -93,3 +94,4 @@ margin-top: 20px; /* espacio entre el botón y el título */
     font-weight: bold;
     color: #420b0b;
 }
+
