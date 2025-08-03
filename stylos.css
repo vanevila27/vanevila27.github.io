@@ -32,7 +32,7 @@ header {
 }
 
 #mapa {
-    height: 400px;
+    height: 450px;
     width: 80%;
     border: 1px solid #ddd;
 }
@@ -103,3 +103,4 @@ margin-top: 20px; /* espacio entre el botón y el título */
     text-align: center; /* centrado del texto */
     
 }
+
