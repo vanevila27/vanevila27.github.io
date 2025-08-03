@@ -96,11 +96,15 @@ margin-top: 20px; /* espacio entre el botón y el título */
 
 .informacion {
     background-color: #7c0404;
-    padding: 1em; /* espacio alrededor del contenido */
-    font-size: 18x; /* tamaño de fuente */
-    font-family: arial, sans-serif; /* tipo de letra */
+    padding: 2em; /* espacio alrededor del contenido */
+    padding-top: 2em; /* espacio superior */
+    padding-bottom: 2em; /* espacio inferior */
+    margin: 1em 0; /* margen superior e inferior */
+    font-size: 18px; /* tamaño de fuente */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /* tipo de letra */
     text-align: center; /* centrado del texto */
     
 }
+
 
 
