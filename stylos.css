@@ -15,7 +15,7 @@ header {
 
 
 #cronometro {
-    background-color: #3b2e86;
+    background-color: #746aaa;
     padding: 2em;
     text-align: center;
     color: #fff;
@@ -113,7 +113,12 @@ section{
   border-bottom: 1px solid #ccc; /* línea divisoria entre secciones */
   padding: 20px; /* espacio alrededor del contenido */
   margin-bottom: 20px; /* espacio entre secciones */
-      background-color: #080808; /* color de fondo de las secciones */
+  background-color: #080808; /* color de fondo de las secciones */
 }
 
+section h2 {
+  font-size: 24px; /* tamaño de fuente del título */
+  color: #fff; /* color del texto del título */
+  margin-bottom: 10px; /* espacio debajo del título */
+}
 
