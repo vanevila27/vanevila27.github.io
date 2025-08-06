@@ -1,12 +1,4 @@
 // Cronómetro
-console.log("Script cargando");
-
-const contador = document.getElementById('contador');
-if (!contador) {
-    console.error("Elemento 'contador' no encontrado");
-}else {
-    console.log("Elemento 'contador' encontrado");
-
 window.onload = function() {
 const fechaBoda = new Date('2025-10-11T19:00:00'); // Fecha y hora de la boda
 const contador = document.getElementById('contador');
@@ -24,7 +16,9 @@ setInterval(() => {
 }, 1000);
 }
 
+
 // Mapa
 const mapa = document.getElementById('mapa');
 // Puedes utilizar una API de mapas como Google Maps o Leaflet para mostrar el mapa
 }
+
