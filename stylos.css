@@ -15,7 +15,8 @@ header {
 
 
 #cronometro {
-    background-color: #530202;
+    background-color:  #a30f0f;
+    padding: 2em;
     padding: 1em;
     text-align: center;
     display: block
@@ -105,6 +106,7 @@ margin-top: 20px; /* espacio entre el botón y el título */
     text-align: center; /* centrado del texto */
     
 }
+
 
 
 
