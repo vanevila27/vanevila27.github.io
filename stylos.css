@@ -16,15 +16,15 @@ header {
 
 #cronometro {
     background-color: #746aaa;
-    padding: 2em;
+    padding: 1em;
     text-align: center;
     color: #fff;
 }
 
 #contador {
-    font-size: 48px;
+    font-size: 30px;
     font-weight: bold;
-    margin-bottom: 20px
+    margin-bottom: 20px;
 }
 
 #ubicacion {
@@ -81,7 +81,7 @@ button {
 background-color: #820ac7;
 color: thistle;
 border: none;
-padding: 10px 20px;
+padding: 20px 30px;
 font-size: 18px;
 cursor: pointer;
 margin-top: 20px; /* espacio entre el botón y el título */
@@ -99,7 +99,7 @@ margin-top: 20px; /* espacio entre el botón y el título */
 }
 
 .informacion {
-    background-color: #7c0404;
+    background-color: #f7f7f7;
     padding: 2em; /* espacio alrededor del contenido */
     padding-top: 2em; /* espacio superior */
     padding-bottom: 2em; /* espacio inferior */
@@ -113,7 +113,7 @@ section{
   border-bottom: 1px solid #ccc; /* línea divisoria entre secciones */
   padding: 20px; /* espacio alrededor del contenido */
   margin-bottom: 20px; /* espacio entre secciones */
-  background-color: #797979; /* color de fondo de las secciones */
+  background-color: #a0a0a0; /* color de fondo de las secciones */
 }
 
 section h2 {
