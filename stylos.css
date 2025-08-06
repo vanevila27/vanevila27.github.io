@@ -28,7 +28,7 @@ header {
 }
 
 #ubicacion {
-    background-color: #f7f7f7;
+  background-color: #020101
     padding: 1em;
 }
 
@@ -127,3 +127,4 @@ section.contador{
   padding: 20px; /* espacio alrededor del contenido */
   text-align: center; /* centrado del texto */
 }
+
