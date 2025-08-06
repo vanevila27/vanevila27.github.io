@@ -113,7 +113,7 @@ section{
   border-bottom: 1px solid #ccc; /* línea divisoria entre secciones */
   padding: 20px; /* espacio alrededor del contenido */
   margin-bottom: 20px; /* espacio entre secciones */
-  background-color: #080808; /* color de fondo de las secciones */
+  background-color: #797979; /* color de fondo de las secciones */
 }
 
 section h2 {
@@ -122,3 +122,8 @@ section h2 {
   margin-bottom: 10px; /* espacio debajo del título */
 }
 
+section.contador{
+  background-color: #f1f1f1; /* color de fondo específico para la sección del contador */
+  padding: 20px; /* espacio alrededor del contenido */
+  text-align: center; /* centrado del texto */
+}
