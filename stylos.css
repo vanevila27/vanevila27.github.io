@@ -42,14 +42,14 @@ header {
     color: #fff;
 }
 
+
 .portada {
     background-image: url(img/Post\ de\ Instagram\ Ubicación\ y\ Horarios\ Moderno\ Gris.jpg);
-    background-size: 100vw; /* asegura que la imagen cubra todo el contenedor */
+    background-size: cover; /* asegura que la imagen cubra todo el contenedor */
     background-position: center; /* centra la imagen dentro del contenedor */
     background-repeat: no-repeat; /* evita que la imagen se repita */
-    
+    height: 100vh; /* hace que la portada ocupe toda la altura de la ventana */
 }
-
 .portada img {
 max-width: 80%; /* limita el ancho máximo de la imagen al 80% del contenedor */
 max-height: 80vh; /* limita la altura máxima de la imagen al 80% de la altura de la ventana */
@@ -129,6 +129,7 @@ section.contador{
   padding: 20px; /* espacio alrededor del contenido */
   text-align: center; /* centrado del texto */
 }
+
 
 
 
