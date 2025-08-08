@@ -80,7 +80,7 @@ header {
  
 }
 button {
-background-color: #820ac7;
+background-color: #106fa7;
 color: thistle;
 border: none;
 padding: 20px 30px;
@@ -129,6 +129,7 @@ section.contador{
   padding: 20px; /* espacio alrededor del contenido */
   text-align: center; /* centrado del texto */
 }
+
 
 
 
