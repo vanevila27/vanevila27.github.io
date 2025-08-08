@@ -89,7 +89,7 @@ border: none;
 padding: 30px 30px;
 font-size: 18px;
 cursor: pointer;
-margin-top: 20px; /* espacio entre el botón y el título */
+margin-top: 30px; /* espacio entre el botón y el título */
 }
 .subtitulo {
   font-size: 20px;
@@ -132,6 +132,7 @@ section.contador{
   padding: 20px; /* espacio alrededor del contenido */
   text-align: center; /* centrado del texto */
 }
+
 
 
 
