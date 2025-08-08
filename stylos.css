@@ -49,14 +49,12 @@ header {
   justify-content: center;
 }
 
-
-.portada img {
-  width: 100%;
-  height: auto; /* ocupa toda la altura de la ventana */
+portada img {
   max-width: 100%; /* asegura que la imagen no exceda el ancho del contenedor */
-  object-fit: cover; /* ajusta el tamaño de la imagen */
-  object-position: center; /* centra la imagen */
-  
+  max-height: 100vh; /* asegura que la imagen no exceda la altura de la ventana */
+  width: auto; /* mantiene el aspecto original de la imagen */
+  height: auto; /* mantiene el aspecto original de la imagen */
+  margin: 0 auto; /* centra la imagen horizontalmente */
 }
 
 
@@ -130,6 +128,7 @@ section.contador{
   padding: 20px; /* espacio alrededor del contenido */
   text-align: center; /* centrado del texto */
 }
+
 
 
 
