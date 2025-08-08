@@ -49,7 +49,7 @@ header {
   justify-content: center;
 }
 
-.portada img {
+
 .portada img {
   width: 100%;
   height: 100vh; /* ocupa toda la altura de la ventana */
@@ -57,7 +57,7 @@ header {
   max-width: 100%; /* asegura que la imagen no exceda el ancho del contenedor */
   object-fit: cover; /* ajusta el tamaño de la imagen */
 }
-}
+
 
 .titulo-novios {
   font-family:great vibes, cursive;
@@ -129,5 +129,6 @@ section.contador{
   padding: 20px; /* espacio alrededor del contenido */
   text-align: center; /* centrado del texto */
 }
+
 
 
