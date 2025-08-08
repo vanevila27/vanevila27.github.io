@@ -41,13 +41,7 @@ header {
     top: 50%;
     color: #fff;
 }
-.portada {
-  position: static;
-  background-color: #e4b3b3;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+
 
 .portada img {
 width: 100%; /* hace que la imagen ocupe todo el ancho del contenedor */
@@ -127,6 +121,7 @@ section.contador{
   padding: 20px; /* espacio alrededor del contenido */
   text-align: center; /* centrado del texto */
 }
+
 
 
 
