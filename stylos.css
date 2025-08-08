@@ -52,10 +52,11 @@ header {
 
 .portada img {
   width: 100%;
-  height: 100vh; /* ocupa toda la altura de la ventana */
-  object-position: center; /* centra la imagen */
+  height: auto; /* ocupa toda la altura de la ventana */
   max-width: 100%; /* asegura que la imagen no exceda el ancho del contenedor */
   object-fit: cover; /* ajusta el tamaño de la imagen */
+  object-position: center; /* centra la imagen */
+  
 }
 
 
@@ -129,6 +130,7 @@ section.contador{
   padding: 20px; /* espacio alrededor del contenido */
   text-align: center; /* centrado del texto */
 }
+
 
 
 
