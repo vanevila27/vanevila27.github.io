@@ -132,6 +132,13 @@ section.contador{
   padding: 20px; /* espacio alrededor del contenido */
   text-align: center; /* centrado del texto */
 }
+.introduccion {
+max-width: 100%; /* limita el ancho máximo de la imagen al 80% del contenedor */
+max-height: 100vh; /* limita la altura máxima de la imagen al 80% de la altura de la ventana */
+width: auto; /* hace que la imagen ocupe todo el ancho del contenedor */
+height: auto; /* mantiene el aspecto original de la imagen */
+margin: 0 auto; /* centra la imagen horizontalmente */
+}
 
 
 
