@@ -144,5 +144,14 @@ section.contador{
     height: auto; /* mantiene el aspecto original de la imagen */
     margin: 0 auto;
   }
+  .introduccion img {
+    background-image: url(img/hola!.png);
+    background-size: cover; /* asegura que la imagen cubra todo el contenedor */
+    background-position: center; /* centra la imagen dentro del contenedor */
+    background-repeat: no-repeat; /* evita que la imagen se repita */
+    height: 100vh; /* hace que la portada ocupe toda la altura de la ventana */
+    width:100%;
+    display:flex;
+}
   
-  }
+
