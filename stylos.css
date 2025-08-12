@@ -84,5 +84,46 @@ body {
   #informacion, #confirmacion {
     padding: 10px;
   }
+  .carrusel {
+  position: relative;
+  width: 80%;
+  margin: 40px auto;
 }
+
+.fotos {
+  display: flex;
+  overflow-x: hidden;
+}
+
+.fotos img {
+  width: 100%;
+  height: auto;
+  margin: 10px;
+  display: none;
+}
+
+.fotos img.active {
+  display: block;
+}
+
+.anterior, .siguiente {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #fff;
+  border: none;
+  padding: 10px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.anterior {
+  left: 0;
+}
+
+.siguiente {
+  right: 0;
+}
+}
+
 
