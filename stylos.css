@@ -1,5 +1,6 @@
 body {
     font-family: Arial, sans-serif;
+    font-size: 16px;
     margin: 0%;
     padding: 0%;
     color: #181717;
@@ -53,9 +54,10 @@ header {
     display:flex;
 }
 
+
 .portada img {
-max-width: 80%; /* limita el ancho máximo de la imagen al 80% del contenedor */
-max-height: 80vh; /* limita la altura máxima de la imagen al 80% de la altura de la ventana */
+max-width: 100%; /* limita el ancho máximo de la imagen al 80% del contenedor */
+max-height: 100vh; /* limita la altura máxima de la imagen al 80% de la altura de la ventana */
 width: auto; /* hace que la imagen ocupe todo el ancho del contenedor */
 height: auto; /* mantiene el aspecto original de la imagen */
 margin: 0 auto; /* centra la imagen horizontalmente */
@@ -68,12 +70,7 @@ margin: 0 auto; /* centra la imagen horizontalmente */
   color: #f7f4f4;
 }
 
-.subtitulo {
-  font-family:playfair display, serif;
-  font-size: 20px;
-  color: #610606;
-  display: block; /* para que el subtítulo esté en una línea separada */
-}
+
 .titulo-container {
   position: absolute;
   top: 50%; /* ajusta la posición del contenedor */
@@ -89,7 +86,7 @@ border: none;
 padding: 30px 30px;
 font-size: 18px;
 cursor: pointer;
-margin-top: 30px; /* espacio entre el botón y el título */
+margin-top: 10px; /* espacio entre el botón y el título */
 }
 .subtitulo {
   font-size: 20px;
@@ -132,35 +129,12 @@ section.contador{
   padding: 20px; /* espacio alrededor del contenido */
   text-align: center; /* centrado del texto */
 }
-.introduccion {
-max-width: 100%; /* limita el ancho máximo de la imagen al 80% del contenedor */
-max-height: 100vh; /* limita la altura máxima de la imagen al 80% de la altura de la ventana */
-width: auto; /* hace que la imagen ocupe todo el ancho del contenedor */
-height: auto; /* mantiene el aspecto original de la imagen */
-margin: 0 auto; /* centra la imagen horizontalmente */
+
+.introduccion img {
+    max-width: 100%; /* limita el ancho máximo de la imagen al 80% del contenedor */
+  
+    width: 100%; /* hace que la imagen ocupe todo el ancho del contenedor */
+    height: auto; /* mantiene el aspecto original de la imagen */
+    margin: 0 auto; /* centra la imagen horizontalmente */
+    object-fit: cover; /* asegura que la imagen cubra todo el contenedor sin distorsionarse */
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
