@@ -164,3 +164,9 @@ section.contador{
     margin-right: 10px; /* espacio entre imágenes */
 }
   
+   @media (max-width: 768px) {
+    .fotos img {
+        width: 50%; /* ancho de cada imagen en pantallas pequeñas */
+    }
+
+
