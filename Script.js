@@ -19,3 +19,7 @@ if (imagenes.length > 0) {
         imagenes[current].style.display = 'block';
     });
 }
+
+// Mapa
+const mapa = document.getElementById('mapa');
+// Puedes utilizar una API de mapas como Google Maps o Leaflet para mostrar el mapa
