@@ -138,3 +138,11 @@ section.contador{
     margin: 0 auto; /* centra la imagen horizontalmente */
     object-fit: cover; /* asegura que la imagen cubra todo el contenedor sin distorsionarse */
 }
+@media (max-width: 768px) {
+  .introduccion img {
+    max-width: 80%; /* limita el ancho máximo de la imagen al 80% del contenedor en pantallas pequeñas */
+    height: auto; /* mantiene el aspecto original de la imagen */
+    margin: 0 auto;
+  }
+  
+  }
