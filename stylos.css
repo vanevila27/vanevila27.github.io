@@ -138,13 +138,7 @@ section.contador{
     margin: 0 auto; /* centra la imagen horizontalmente */
     object-fit: cover; /* asegura que la imagen cubra todo el contenedor sin distorsionarse */
 }
-@media (max-width: 768px) {
-  .introduccion img {
-    max-width: 80%; /* limita el ancho máximo de la imagen al 80% del contenedor en pantallas pequeñas */
-    height: auto; /* mantiene el aspecto original de la imagen */
-    margin: 0 auto;
-  }
-  .introduccion img {
+.introduccion img {
     background-image: url(img/hola!.png);
     background-size: cover; /* asegura que la imagen cubra todo el contenedor */
     background-position: center; /* centra la imagen dentro del contenedor */
@@ -153,5 +147,20 @@ section.contador{
     width:100%;
     display:flex;
 }
-  
 
+.carril-de-fotos {
+    width: 100%;
+    overflow: auto; /* permite el desplazamiento horizontal */
+}
+
+.fotos{
+  display: flex;
+  flex-wrap: nowrap;
+}
+.fotos img {
+    width: 25%; /* ancho de cada imagen */
+    height: auto; /* alto de cada imagen */
+    object-fit: cover; /* asegura que la imagen cubra todo el espacio sin distorsionarse */
+    margin-right: 10px; /* espacio entre imágenes */
+}
+  
