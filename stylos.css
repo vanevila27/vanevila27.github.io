@@ -15,19 +15,6 @@ header {
 }
 
 
-#cronometro {
-    background-color: #61b3ae;
-    padding: 1em;
-    text-align: center;
-    color: #fff;
-}
-
-#contador {
-    font-size: 30px;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-
 #ubicacion {
     background-color: #ffffff;
     padding: 1em;
@@ -94,11 +81,7 @@ margin-top: 10px; /* espacio entre el botón y el título */
   display: block; /* para que el subtítulo esté en una línea separada */
 }
 
-.contador {
-    font-size: 48px;
-    font-weight: bold;
-    color: #110505;
-}
+
 
 .informacion {
     background-color: #f7f7f7;
@@ -124,11 +107,6 @@ section h2 {
   margin-bottom: 10px; /* espacio debajo del título */
 }
 
-section.contador{
-  background-color: #f1f1f1; /* color de fondo específico para la sección del contador */
-  padding: 20px; /* espacio alrededor del contenido */
-  text-align: center; /* centrado del texto */
-}
 
 .introduccion img {
     max-width: 100%; /* limita el ancho máximo de la imagen al 80% del contenedor */
@@ -164,9 +142,16 @@ section.contador{
     margin-right: 10px; /* espacio entre imágenes */
 }
   
-   @media (max-width: 768px) {
+@media (max-width: 768px) {
     .fotos img {
         width: 50%; /* ancho de cada imagen en pantallas pequeñas */
     }
+}
 
-
+.contenedor{
+  width: 80%;
+  margin: 0 auto; /* centra el contenedor */
+  display: flex;
+  flex-wrap: wrap; /* permite que los elementos se ajusten en varias líneas */
+  justify-content: space-between; /* centra los elementos dentro del contenedor */
+}
