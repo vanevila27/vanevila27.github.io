@@ -32,7 +32,7 @@ body {
 
 @media (max-width: 768px) {
   .portada {
-    height: 70vh;
+    height: 100vh;
   }
   .titulo-novios {
     font-size: 30px;
@@ -129,6 +129,7 @@ body {
   height: auto;
 }
 }
+
 
 
 
