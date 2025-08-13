@@ -27,7 +27,7 @@ body {
 
 .subtitulo {
   font-size: 20px;
-  color: #038ba3;
+  color: #c99ab7;
 }
 .boton-ingresar {
   background-color: #3b5998; /* Un azul bonito para el fondo */
@@ -143,5 +143,6 @@ body {
   max-width: 100%;
   height: auto;
 }
+
 
 
