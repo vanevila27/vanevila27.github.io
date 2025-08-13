@@ -1,26 +1,36 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const fotos = document.querySelector('.fotos');
-    const imagenes = document.querySelectorAll('.fotos img');
-    const anterior = document.querySelector('.anterior');
-    const siguiente = document.querySelector('.siguiente');
+  const carrusel = document.querySelector('.carrusel');
+  const imagenes = document.querySelectorAll('.carrusel img');
+  const anteriorBtn = document.querySelector('.anterior');
+  const siguienteBtn = document.querySelector('.siguiente');
+  let currentIndex = 0;
 
-let current = 0;
+  // Solo si el carrusel existe y tiene imágenes
+  if (carrusel && imagenes.length > 0) {
+    const imagenAncho = imagenes[0].offsetWidth; // Obtiene el ancho de la imagen
 
-if (imagenes.length > 0) {
-    imagenes[current].style.display = 'block';
+    function moverCarrusel(index) {
+      // Desplaza el carrusel horizontalmente a la posición de la imagen actual
+      carrusel.scrollLeft = imagenAncho * index;
+    }
 
-    anterior.addEventListener('click', () => {
-        imagenes[current].style.display = 'none';
-        current = (current - 1 + imagenes.length) % imagenes.length;
-        imagenes[current].style.display = 'block';
+    anteriorBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex - 1 + imagenes.length) % imagenes.length;
+      moverCarrusel(currentIndex);
     });
-    siguiente.addEventListener('click', () => {
-        imagenes[current].style.display = 'none';
-        current = (current + 1) % imagenes.length;
-        imagenes[current].style.display = 'block';
+
+    siguienteBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex + 1) % imagenes.length;
+      moverCarrusel(currentIndex);
     });
-}
+  }
+});
 
 // Mapa
 const mapa = document.getElementById('mapa');
 // Puedes utilizar una API de mapas como Google Maps o Leaflet para mostrar el mapa
+
+// Mapa
+const mapa = document.getElementById('mapa');
+// Puedes utilizar una API de mapas como Google Maps o Leaflet para mostrar el mapa
+
