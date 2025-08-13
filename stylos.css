@@ -153,9 +153,10 @@ body {
     z-index: 10;
   }
 
-   #invitacion img {
+  .invitacion img {
   max-width: 100%;
   height: auto;
 }
 }
+
 
