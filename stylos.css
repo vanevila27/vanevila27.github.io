@@ -153,10 +153,19 @@ body {
     z-index: 10;
   }
 
-  .invitacion img {
-  max-width: 100%;
+  .invitacion {
+  max-width: 50%;
   height: auto;
 }
+
+.horarios {
+  max-width: 50%;
+  height: auto;
+
 }
+}
+
+}
+
 
 
