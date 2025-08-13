@@ -27,9 +27,22 @@ body {
 
 .subtitulo {
   font-size: 20px;
-  color: #080808;
+  color: #038ba3;
+}
+.boton-ingresar {
+  background-color: #3b5998; /* Un azul bonito para el fondo */
+  color: white; /* Color del texto */
+  padding: 15px 30px; /* Tamaño del botón */
+  border: none; /* Sin borde */
+  border-radius: 5px; /* Bordes redondeados */
+  font-size: 18px; /* Tamaño de la letra */
+  cursor: pointer; /* Cambia el cursor a una mano */
+  transition: background-color 0.3s ease; /* Transición suave al pasar el mouse */
 }
 
+.boton-ingresar:hover {
+  background-color: #4b6ca6; /* Un color un poco más claro al pasar el mouse */
+}
 @media (max-width: 768px) {
   .portada {
     height: 100vh;
@@ -84,7 +97,9 @@ body {
   #informacion, #confirmacion {
     padding: 10px;
   }
-  .carrusel {
+}
+
+.carrusel {
   position: relative;
   width: 80%;
   margin: 40px auto;
@@ -124,14 +139,9 @@ body {
 .siguiente {
   right: 0;
 }
-  #informacion img {
+#informacion img {
   max-width: 100%;
   height: auto;
 }
-}
-
-
-
-
 
 
