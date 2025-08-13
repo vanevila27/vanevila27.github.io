@@ -124,7 +124,12 @@ body {
 .siguiente {
   right: 0;
 }
+  #informacion img {
+  max-width: 100%;
+  height: auto;
 }
+}
+
 
 
 
