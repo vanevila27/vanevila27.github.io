@@ -153,11 +153,9 @@ body {
     z-index: 10;
   }
 
-  .anterior {
-    left: 10px;
-  }
-
-  .siguiente {
-    right: 10px;
-  }
+   #invitacion img {
+  max-width: 100%;
+  height: auto;
 }
+}
+
