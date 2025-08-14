@@ -30,30 +30,44 @@ img {
 }
 
 .titulo-novios {
-  font-size: 40px;
-  color: #f7f4f4;
+  font-size: 60px;
+  color: #fff;
+  font-family: 'Dancing Script', cursive;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
 }
 
 .subtitulo {
-  font-size: 20px;
-  color: #c99ab7;
+  font-size: 24px;
+  color: #f0cde1;
+  font-family: 'Dancing Script', cursive;
+  
+  margin-bottom: 10px;
 }
 
 .boton-ingresar {
-  background-color: #3b5998;
-  color: white;
-  padding: 15px 30px;
-  border: none;
-  border-radius: 5px;
+  background-color: #eac7d4;
+  color: #5a2a45;
+  padding: 12px 28px;
+  border: 2px solid #5a2a45;
+  border-radius: 30px;
   font-size: 18px;
+  font-family: 'Dancing Script', cursive;
+  font-weight: bold;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .boton-ingresar:hover {
-  background-color: #4b6ca6;
+  background-color: #f7dce7;
+  color: #3e1a31;
+  border-color: #3e1a31;
 }
 
+.boton-ingresar:focus {
+  outline: none;
+}
 /* ======= INVITACIÓN ======= */
 .invitacion img {
   width: 100%;
@@ -176,6 +190,7 @@ img {
     padding: 10px;
   }
 }
+
 
 
 
