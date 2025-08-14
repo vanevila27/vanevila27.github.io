@@ -152,14 +152,25 @@ body {
     cursor: pointer;
     z-index: 10;
   }
-.invitacion{
+  
+@media(max-width: 768px) {
+   
+  }
+  .invitacion{
     height: 50vh;
   }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
 }
 
 
 
   
+
 
 
 
