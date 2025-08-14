@@ -155,7 +155,7 @@ body {
 
 
 @media (max-width: 768px) {
-  .invitacion img .Horarios img {
+  .invitacion img, .Horarios img {
     width: 80%;
     height: auto;
     margin: 0 auto;
@@ -164,6 +164,7 @@ body {
   
 }
   }
+
 
 
 
