@@ -152,12 +152,15 @@ body {
     cursor: pointer;
     z-index: 10;
   }
-
+.invitacion{
+    height: 50vh;
+  }
 }
 
 
 
   
+
 
 
 
