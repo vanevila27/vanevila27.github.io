@@ -154,8 +154,17 @@ body {
   }
 
   .invitacion {
-  max-width: 50%;
+  width: 100%;
   height: auto;
+  display: block;
+}
+
+.horarios {
+  width: 100%;
+  height: auto;
+  display: block;
+
+}
 }
 
 .horarios {
@@ -164,6 +173,7 @@ body {
 
 }
 }
+
 
 
 
