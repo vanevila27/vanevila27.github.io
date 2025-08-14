@@ -4,7 +4,7 @@ body {
   padding: 0;
 }
 
-.portada {
+.portada, .invitacion, .Horarios {
   background-image: url(img/Post\ de\ Instagram\ Ubicación\ y\ Horarios\ Moderno\ Gris.jpg);
   background-size: cover;
   background-position: center;
@@ -161,6 +161,7 @@ body {
     width: auto !important;
 }
   }
+
 
 
 
