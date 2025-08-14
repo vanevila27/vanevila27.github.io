@@ -155,12 +155,13 @@ body {
 
 
 
-  .invitacion img, .Horarios img {
+  .invitacion img, .Horarios img, .carrusel img {
     max-width: 100%;
     height: auto ;
    
 }
   }
+
 
 
 
