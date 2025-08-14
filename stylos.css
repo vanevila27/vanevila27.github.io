@@ -153,19 +153,20 @@ body {
     z-index: 10;
   }
 
-  .invitacion {
+  .invitacion img {
   width: 100%;
   height: auto;
   display: block;
 }
 
-.horarios {
+.horarios img {
   width: 100%;
   height: auto;
   display: block;
 
 }
   }
+
 
 
 
