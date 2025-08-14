@@ -156,14 +156,18 @@ body {
 
 @media (max-width: 768px) {
   .invitacion img, .Horarios img {
-    max-width: 100% !important;
-    height: auto !important;
+    max-width: 100%;
+    height: auto ;
+    width: 100% ;
     display: block;
     margin: 0 auto;
+    object-fit: contain;
+
   }
   
 }
   }
+
 
 
 
