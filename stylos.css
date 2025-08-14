@@ -154,11 +154,10 @@ body {
   }
   
 @media(max-width: 768px) {
-   
-  }
   .invitacion{
     height: 50vh;
   }
+}
 
   img {
     max-width: 100%;
@@ -170,6 +169,7 @@ body {
 
 
   
+
 
 
 
