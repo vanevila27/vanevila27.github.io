@@ -153,22 +153,23 @@ body {
     z-index: 10;
   }
   
-@media(max-width: 768px) {
-  .invitacion{
-    height: 50vh;
-  }
+.invitacion img, .Horarios img {
+  width: 100%;
+  height: auto;
 }
 
-  img {
-    max-width: 100%;
+@media (max-width: 768px) {
+  .invitacion img, .Horarios img {
+    width: 100%;
     height: auto;
   }
-
+}
 }
 
 
 
   
+
 
 
 
