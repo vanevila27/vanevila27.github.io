@@ -1,162 +1,169 @@
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 .portada {
-  background-image: url(img/Post\ de\ Instagram\ Ubicación\ y\ Horarios\ Moderno\ Gris.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 100vh;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background-image: url(img/Post\ de\ Instagram\ Ubicación\ y\ Horarios\ Moderno\ Gris.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .titulo-container {
-  text-align: center;
+  text-align: center;
 }
 
 .titulo-novios {
-  font-size: 40px;
-  color: #f7f4f4;
+  font-size: 40px;
+  color: #f7f4f4;
 }
 
 .subtitulo {
-  font-size: 20px;
-  color: #c99ab7;
+  font-size: 20px;
+  color: #c99ab7;
 }
 
 .boton-ingresar {
-  background-color: #3b5998;
-  color: white;
-  padding: 15px 30px;
-  border: none;
-  border-radius: 5px;
-  font-size: 18px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+  background-color: #3b5998; /* Un azul bonito para el fondo */
+  color: white; /* Color del texto */
+  padding: 15px 30px; /* Tamaño del botón */
+  border: none; /* Sin borde */
+  border-radius: 5px; /* Bordes redondeados */
+  font-size: 18px; /* Tamaño de la letra */
+  cursor: pointer; /* Cambia el cursor a una mano */
+  transition: background-color 0.3s ease; /* Transición suave al pasar el mouse */
 }
 
 .boton-ingresar:hover {
-  background-color: #4b6ca6;
+  background-color: #4b6ca6; /* Un color un poco más claro al pasar el mouse */
 }
 
 @media (max-width: 768px) {
-  .portada {
-    height: 100vh;
-  }
-  .titulo-novios {
-    font-size: 40px;
-  }
-  .subtitulo {
-    font-size: 18px;
-  }
+  .portada {
+    height: 100vh;
+  }
+  .titulo-novios {
+    font-size: 40px;
+  }
+  .subtitulo {
+    font-size: 18px;
+  }
 }
 
 #introduccion img {
-  max-width: 100%;
-  height: auto;
+  max-width: 100%;
+  height: auto;
 }
 
 #introduccion picture img {
-  width: 100%;
-  height: auto;
+  width: 100%;
+  height: auto;
 }
 
-/* **Reglas para imágenes de invitación y horarios, aplicadas en todas las pantallas** */
-.invitacion img,
-.Horarios img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
+/* **CORRECCIÓN DE LA GALERÍA** */
 .galeria {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
-  padding: 10px;
+  display: flex;
+  flex-wrap: wrap; /* Las imágenes pasarán a la siguiente línea si no hay espacio */
+  justify-content: center; /* Centra las imágenes horizontalmente */
+  gap: 10px; /* Añade un espacio entre las imágenes */
+  padding: 10px;
 }
 
 .galeria img {
-  width: 100%;
-  max-width: 300px;
-  height: auto;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%; /* Cada imagen ocupa su propia línea en el móvil */
+  max-width: 300px; /* Limita el ancho máximo para que no sean demasiado grandes */
+  height: auto;
+  border-radius: 8px; /* Opcional: para darle un toque más moderno */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Opcional: para que se vean como tarjetas */
 }
 
 @media (min-width: 600px) {
-  .galeria img {
-    flex: 1 1 300px;
-  }
+  .galeria img {
+    flex: 1 1 300px; /* Las imágenes crecerán y encogerán de forma flexible */
+  }
 }
 
 #ubicacion iframe {
-  width: 100%;
-  height: 250px;
-  border: none;
+  width: 100%;
+  height: 250px;
+  border: none;
 }
 
 #informacion, #confirmacion {
-  padding: 20px;
+  padding: 20px;
 }
 
 @media (max-width: 768px) {
-  #informacion, #confirmacion {
-    padding: 10px;
-  }
+  #informacion, #confirmacion {
+    padding: 10px;
+  }
 }
 
 /* **CORRECCIÓN DEL CARRUSEL** */
 .carrusel-container {
-  position: relative;
-  width: 100%;
-  margin: 40px auto;
-  padding: 0 20px;
+  position: relative;
+  width: 100%; /* Ocupa todo el ancho */
+  margin: 40px auto;
+  padding: 0 20px; /* Añade un pequeño padding para que no se pegue a los bordes */
 }
 
 .carrusel {
-  display: flex;
-  overflow-x: scroll;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
-  gap: 10px;
+  display: flex;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  gap: 10px;
 }
 
 .carrusel img {
-  width: 100%;
-  height: auto;
-  flex-shrink: 0;
-  scroll-snap-align: center;
+  width: 100%; /* La imagen ocupa todo el ancho del contenedor */
+  height: auto;
+  flex-shrink: 0;
+  scroll-snap-align: center;
 }
 
-/* Botones de navegación solo en pantallas grandes */
+/* Botones de navegación (para escritorio) */
 .anterior, .siguiente {
-  display: none;
+  display: none;
 }
 
 @media (min-width: 769px) {
-  .carrusel {
-    overflow-x: hidden;
-  }
+  .carrusel {
+    overflow-x: hidden; /* Oculta la barra de desplazamiento en computadoras */
+  }
 
-  .anterior, .siguiente {
-    display: block;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 10px;
-    font-size: 24px;
-    cursor: pointer;
-    z-index: 10;
-  }
+  .anterior, .siguiente {
+    display: block; /* Vuelve a mostrar los botones en computadoras */
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 10;
+  }
+
+
+  .invitacion img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.Horarios img {
+  width: 100%;
+  height: auto;
+  display: block;
+
+}
 }
