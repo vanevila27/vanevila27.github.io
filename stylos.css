@@ -142,6 +142,16 @@ body {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+/* ======= INVITACIÓN ======= */
+.invitacion img {
+  width: 100%;
+  max-width: 600px; /* Limita el tamaño máximo en pantallas grandes */
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 12px; /* Agrega bordes redondeados para un toque más suave */
+}
+
 /* ======= RESPONSIVE ======= */
 @media (max-width: 768px) {
   .titulo-novios {
@@ -152,9 +162,13 @@ body {
     font-size: 22px;
   }
 
+  .invitacion img {
+    width: 90%;  /* Ajusta el tamaño de la imagen a un 90% del ancho de la pantalla */
+    max-width: none; /* Elimina el límite de tamaño máximo */
+  }
+
   #informacion,
   #confirmacion {
     padding: 10px;
   }
 }
-
