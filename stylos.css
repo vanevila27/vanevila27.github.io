@@ -1,15 +1,10 @@
 /* ======= ESTILOS GENERALES ======= */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Sacramento', cursive;
   margin: 0;
   padding: 0;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 auto;
+  background-color: #f9f4f2;
+  color: #3e1a31;
 }
 
 /* ======= PORTADA ======= */
@@ -30,19 +25,20 @@ img {
 }
 
 .titulo-novios {
-  font-size: 60px;
+  font-size: 70px;
   color: #fff;
-  font-family: 'Dancing Script', cursive;
+  font-family: 'Pinyon Script', cursive;
   letter-spacing: 2px;
   margin-bottom: 10px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 .subtitulo {
-  font-size: 24px;
+  font-size: 28px;
   color: #f0cde1;
-  font-family: 'Dancing Script', cursive;
-  
+  font-family: 'Sacramento', cursive;
   margin-bottom: 10px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
 }
 
 .boton-ingresar {
@@ -51,8 +47,8 @@ img {
   padding: 12px 28px;
   border: 2px solid #5a2a45;
   border-radius: 30px;
-  font-size: 18px;
-  font-family: 'Dancing Script', cursive;
+  font-size: 20px;
+  font-family: 'Sacramento', cursive;
   font-weight: bold;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -68,51 +64,6 @@ img {
 .boton-ingresar:focus {
   outline: none;
 }
-/* ======= INVITACIÓN ======= */
-.invitacion img {
-  width: 100%;
-  max-width: 600px;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-}
-
-/* ======= HORARIOS ======= */
-.Horarios {
-  text-align: center;
-  padding: 20px;
-}
-
-.Horarios h2 {
-  font-size: 24px;
-  color: #333;
-  margin-bottom: 10px;
-}
-
-.Horarios img {
-  width: 100%;
-  max-width: 600px;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-}
-
-/* ======= GALERÍA ======= */
-.galeria {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
-  padding: 10px;
-}
-
-.galeria img {
-  width: 100%;
-  max-width: 300px;
-  height: auto;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
 
 /* ======= CARRUSEL ======= */
 .carrusel-container {
@@ -126,8 +77,8 @@ img {
   display: flex;
   overflow-x: scroll;
   scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
   gap: 10px;
+  transition: all 0.3s ease;
 }
 
 .carrusel img {
@@ -135,54 +86,70 @@ img {
   height: auto;
   flex-shrink: 0;
   scroll-snap-align: center;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Botones de navegación (solo en escritorio) */
+/* Botones de navegación */
 .anterior, .siguiente {
-  display: none;
+  display: block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 24px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
 }
 
-@media (min-width: 769px) {
-  .carrusel {
-    overflow-x: hidden;
-  }
+.anterior:hover, .siguiente:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
 
-  .anterior, .siguiente {
-    display: block;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 10px;
-    font-size: 24px;
-    cursor: pointer;
-    z-index: 10;
-  }
+/* ======= HORARIOS ======= */
+.Horarios {
+  text-align: center;
+  padding: 20px;
+}
+
+.Horarios h2 {
+  font-size: 28px;
+  color: #5a2a45;
+  margin-bottom: 10px;
+  font-family: 'Sacramento', cursive;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.Horarios img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* ======= UBICACIÓN ======= */
 #ubicacion iframe {
   width: 100%;
   height: 250px;
-  border: none;
-}
-
-/* ======= INFORMACIÓN & CONFIRMACIÓN ======= */
-#informacion,
-#confirmacion {
-  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* ======= RESPONSIVE ======= */
 @media (max-width: 768px) {
   .titulo-novios {
-    font-size: 36px;
+    font-size: 50px;
   }
 
   .subtitulo {
-    font-size: 18px;
+    font-size: 22px;
   }
 
   #informacion,
@@ -190,14 +157,4 @@ img {
     padding: 10px;
   }
 }
-
-
-
-
-
-
-
-
-
-
 
