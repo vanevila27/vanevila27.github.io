@@ -46,4 +46,167 @@ body {
   color: #5a2a45;
   padding: 12px 28px;
   border: 2px solid #5a2a45;
-  border-radius: 3
+  border-radius: 30px;
+  font-size: 20px;
+  font-family: 'Sacramento', cursive;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.boton-ingresar:hover {
+  background-color: #f7dce7;
+  color: #3e1a31;
+  border-color: #3e1a31;
+}
+
+.boton-ingresar:focus {
+  outline: none;
+}
+
+/* ======= CARRUSEL ======= */
+.carrusel-container {
+  position: relative;
+  width: 100%;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.carrusel {
+  display: flex;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  gap: 10px;
+  transition: all 0.3s ease;
+}
+
+.carrusel img {
+  width: 100%; /* Asegura que las imágenes ocupen todo el ancho disponible */
+  height: 300px; /* Ajusta la altura a un valor específico para evitar que se estiren */
+  object-fit: cover; /* Mantiene la proporción de la imagen sin deformarse */
+  flex-shrink: 0;
+  scroll-snap-align: center;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Botones de navegación */
+.anterior, .siguiente {
+  display: block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 24px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.anterior:hover, .siguiente:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* ======= HORARIOS ======= */
+.Horarios {
+  text-align: center;
+  padding: 30px 20px;
+  background-color: #f7e8f3; /* Fondo suave de color pastel */
+  border-radius: 15px; /* Bordes redondeados */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave para profundidad */
+  margin: 30px auto;
+  max-width: 800px; /* Limita el ancho para que no se vea tan extendido */
+}
+
+.Horarios h2 {
+  font-size: 36px;
+  color: #5a2a45;
+  margin-bottom: 20px;
+  font-family: 'Pinyon Script', cursive;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.Horarios p {
+  font-size: 22px;
+  color: #5a2a45;
+  font-family: 'Sacramento', cursive;
+  margin-bottom: 15px;
+  line-height: 1.6; /* Aumenta el espacio entre líneas para facilitar la lectura */
+}
+
+.Horarios img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  display: block;
+  margin: 30px auto;
+  border-radius: 12px; /* Bordes redondeados para las imágenes */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Añadir un pequeño icono al lado del título */
+.Horarios h2::before {
+  content: '\1F551'; /* Icono de reloj */
+  font-size: 40px;
+  margin-right: 10px;
+  vertical-align: middle;
+  color: #eac7d4; /* Color delicado */
+}
+
+/* ======= UBICACIÓN ======= */
+#ubicacion iframe {
+  width: 100%;
+  height: 250px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ======= INVITACIÓN ======= */
+.invitacion img {
+  width: 100%;  /* Imagen a 100% de ancho */
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 12px; /* Agrega bordes redondeados para un toque más suave */
+}
+
+/* ======= RESPONSIVE ======= */
+@media (max-width: 768px) {
+  .titulo-novios {
+    font-size: 50px;
+  }
+
+  .subtitulo {
+    font-size: 22px;
+  }
+
+  /* Imagen de invitación en móviles */
+  .invitacion img {
+    width: 100%; /* Ocupa todo el ancho de la pantalla */
+    height: auto;
+  }
+
+  #informacion,
+  #confirmacion {
+    padding: 10px;
+  }
+
+  /* Ajustes de los horarios para móvil */
+  .Horarios {
+    padding: 20px;
+    max-width: 100%; /* El ancho de la sección se adapta al 100% */
+  }
+
+  .Horarios h2 {
+    font-size: 28px;
+  }
+
+  .Horarios p {
+    font-size: 20px;
+  }
+}
+
