@@ -13,6 +13,40 @@ body {
   margin: 0 auto;
   border-radius: 12px;
 }
+.titulo-container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  gap: 15px; /* espacio entre elementos */
+}
+
+.titulo-novios {
+  font-size: 50px;
+  margin: 0;
+}
+
+.subtitulo {
+  font-size: 24px;
+  color: #a14d70;
+}
+
+.boton-ingresar {
+  padding: 12px 25px;
+  background-color: #a14d70;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.boton-ingresar:hover {
+  background-color: #7a4f61;
+}
 
 /* Carrusel */
 .carrusel-container { position: relative; width: 100%; margin: 40px auto; padding: 0 20px; }
@@ -77,15 +111,7 @@ body {
   .Horarios h2, .Ubicacion h2 { font-size: 24px; }
   .Horarios p { font-size: 18px; }
 }
-.logo {
-  width: 250px; /* tamaño máximo deseado */
-  max-width: 90%; /* no supere el ancho de la pantalla en móviles */
-  height: auto; /* mantiene proporción */
-  display: block;
-  margin: 0 auto 20px auto; /* centrado y espacio debajo */
-  border-radius: 12px; /* bordes redondeados opcionales */
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08); /* sombra ligera */
-}
+
 
 
 
