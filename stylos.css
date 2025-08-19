@@ -15,8 +15,8 @@ body {
 }
 /* Imagen de portada */
 .logo {
-  width: 250px;        /* tamaño base más pequeño */
-  max-width: 90%;      /* nunca más del 50% del ancho de la pantalla */
+  width: 100%;        /* tamaño base más pequeño */
+  max-width: 50%;      /* nunca más del 50% del ancho de la pantalla */
   height: auto;        /* mantiene proporción */
   display: block;
   margin: 0 auto 20px auto; /* centrado y espacio debajo */
@@ -27,7 +27,7 @@ body {
 /* Ajuste para móviles */
 @media (max-width: 768px) {
   .logo {
-    width: 180%;      /* más pequeña en móviles */
+    width: 100%;      /* más pequeña en móviles */
     max-width: 80%;
     margin-bottom: 15px;
   }
@@ -134,6 +134,7 @@ body {
   .Horarios h2, .Ubicacion h2 { font-size: 24px; }
   .Horarios p { font-size: 18px; }
 }
+
 
 
 
