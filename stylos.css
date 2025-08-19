@@ -25,7 +25,7 @@ body {
 .Horarios {
   text-align: center;
   padding: 30px 20px;
-  background-color: #f7e8f3;
+  background-color: #fff0f5; /* Lavanda muy suave */
   border-radius: 15px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   margin: 30px auto;
@@ -47,13 +47,13 @@ body {
   color: #5a2a45;
   margin-bottom: 15px;
 }
-.Horarios img { width: 100%; max-width: 600px; height: auto; display: block; margin: 30px auto; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+.Horarios img { width: 100%; max-width: 600px; height: auto; display: block; margin: 30px auto; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); opacity: 0.8; }
 
 /* Ubicación */
 .Ubicacion {
   text-align: center;
   padding: 30px 20px;
-  background-color: #f7e8f3;
+  background-color: #fff0f5; /* Lavanda muy suave */
   border-radius: 15px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   margin: 30px auto;
