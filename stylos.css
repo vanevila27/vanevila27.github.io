@@ -15,11 +15,11 @@ body {
 }
 /* Imagen de portada */
 .logo {
-  width: 100%;        /* tamaño base más pequeño */
-  max-width: 50%;      /* nunca más del 50% del ancho de la pantalla */
-  height: auto;        /* mantiene proporción */
+  width: 80%;        /* ahora puede ocupar más del ancho */
+  max-width: 600px;  /* nunca más de 600px para que no se salga de la pantalla */
+  height: auto;
   display: block;
-  margin: 0 auto 20px auto; /* centrado y espacio debajo */
+  margin: 0 auto 15px auto;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.08);
 }
@@ -27,11 +27,12 @@ body {
 /* Ajuste para móviles */
 @media (max-width: 768px) {
   .logo {
-    width: 100%;      /* más pequeña en móviles */
-    max-width: 80%;
-    margin-bottom: 15px;
+    width: 90%;       /* más pequeña en móviles */
+    max-width: none;  /* quitar límite máximo */
+    margin-bottom: 10px;
   }
-}
+
+
 
 /* Contenedor del header */
 .titulo-container {
@@ -158,6 +159,7 @@ body {
   .Horarios h2, .Ubicacion h2 { font-size: 24px; }
   .Horarios p { font-size: 18px; }
 }
+
 
 
 
