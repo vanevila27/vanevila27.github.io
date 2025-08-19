@@ -77,6 +77,17 @@ body {
   .Horarios h2, .Ubicacion h2 { font-size: 24px; }
   .Horarios p { font-size: 18px; }
 }
+.logo {
+  width: 250px; /* tamaño máximo deseado */
+  max-width: 90%; /* no supere el ancho de la pantalla en móviles */
+  height: auto; /* mantiene proporción */
+  display: block;
+  margin: 0 auto 20px auto; /* centrado y espacio debajo */
+  border-radius: 12px; /* bordes redondeados opcionales */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08); /* sombra ligera */
+}
+
+
 
 
 
