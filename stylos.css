@@ -41,6 +41,7 @@ body {
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
 }
 
+/* ======= BOTÓN PORTADA ======= */
 .boton-ingresar {
   background-color: #eac7d4;
   color: #5a2a45;
@@ -82,9 +83,9 @@ body {
 }
 
 .carrusel img {
-  width: 100%; /* Asegura que las imágenes ocupen todo el ancho disponible */
-  height: 300px; /* Ajusta la altura a un valor específico para evitar que se estiren */
-  object-fit: cover; /* Mantiene la proporción de la imagen sin deformarse */
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
   flex-shrink: 0;
   scroll-snap-align: center;
   border-radius: 12px;
@@ -115,27 +116,11 @@ body {
 .Horarios {
   text-align: center;
   padding: 30px 20px;
-  background-color: #f7e8f3; /* Fondo suave de color pastel */
-  border-radius: 15px; /* Bordes redondeados */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave para profundidad */
+  background-color: #f7e8f3;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   margin: 30px auto;
-  max-width: 800px; /* Limita el ancho para que no se vea tan extendido */
-}
-
-.Horarios h2 {
-  font-size: 36px;
-  color: #5a2a45;
-  margin-bottom: 20px;
-  font-family: 'Pinyon Script', cursive;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
-}
-
-.Horarios p {
-  font-size: 22px;
-  color: #5a2a45;
-  font-family: 'Sacramento', cursive;
-  margin-bottom: 15px;
-  line-height: 1.6; /* Aumenta el espacio entre líneas para facilitar la lectura */
+  max-width: 800px;
 }
 
 .Horarios img {
@@ -144,36 +129,46 @@ body {
   height: auto;
   display: block;
   margin: 30px auto;
-  border-radius: 12px; /* Bordes redondeados para las imágenes */
+  border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Añadir un pequeño icono al lado del título */
-.Horarios h2::before {
-  content: '\1F551'; /* Icono de reloj */
-  font-size: 40px;
-  margin-right: 10px;
-  vertical-align: middle;
-  color: #eac7d4; /* Color delicado */
+/* ======= UBICACIÓN ======= */
+#ubicacion {
+  text-align: center;
+  margin: 30px auto;
+  max-width: 800px;
 }
 
-/* ======= UBICACIÓN ======= */
 #ubicacion iframe {
   width: 100%;
-  height: 250px; /* Puedes ajustar la altura si quieres */
+  height: 250px;
   border-radius: 15px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  min-height: 250px; /* también puedes ajustar esto */
+  min-height: 250px;
+}
 
+/* ======= TITULOS DELICADOS ======= */
+.Horarios h2, 
+#ubicacion h2 {
+  font-size: 32px;
+  font-family: 'Pinyon Script', cursive;
+  color: #a14d70;
+  font-weight: normal;
+  margin-bottom: 20px;
+  text-shadow: none;
+  border-bottom: 2px solid #eac7d4;
+  display: inline-block;
+  padding-bottom: 5px;
 }
 
 /* ======= INVITACIÓN ======= */
 .invitacion img {
-  width: 100%;  /* Imagen a 100% de ancho */
+  width: 100%;
   height: auto;
   display: block;
   margin: 0 auto;
-  border-radius: 12px; /* Agrega bordes redondeados para un toque más suave */
+  border-radius: 12px;
 }
 
 /* ======= RESPONSIVE ======= */
@@ -186,31 +181,23 @@ body {
     font-size: 22px;
   }
 
-  /* Imagen de invitación en móviles */
   .invitacion img {
-    width: 100%; /* Ocupa todo el ancho de la pantalla */
+    width: 100%;
     height: auto;
   }
 
-  #informacion,
-  #confirmacion {
-    padding: 10px;
-  }
-
-  /* Ajustes de los horarios para móvil */
   .Horarios {
     padding: 20px;
-    max-width: 100%; /* El ancho de la sección se adapta al 100% */
+    max-width: 100%;
   }
 
-  .Horarios h2 {
-    font-size: 28px;
-  }
-
-  .Horarios p {
-    font-size: 20px;
+  .Horarios h2,
+  #ubicacion h2 {
+    font-size: 26px;
   }
 }
+
+
 
 
 
