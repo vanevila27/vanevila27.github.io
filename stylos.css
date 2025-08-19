@@ -106,7 +106,7 @@ body {
 .Horarios {
   text-align: center;
   padding: 30px 20px;
-  background-color: #c5b1b8; /* Lavanda muy suave */
+  background-color: #fff1f6 /* Lavanda muy suave */
   border-radius: 20px; /* bordes más redondeados */
   box-shadow: 0 2px 6px rgba(0,0,0,0.08);/* sombra más suave */
   margin: 30px auto;
@@ -134,7 +134,7 @@ body {
 .Ubicacion {
   text-align: center;
   padding: 30px 20px;
-  background-color: #c5b1b8; /* Lavanda muy suave */
+  background-color: #fff1f6 /* Lavanda muy suave */
   border-radius: 20px; /* bordes más redondeados */
   box-shadow: 0 2px 6px rgba(0,0,0,0.08);/* sombra más suave */
   margin: 30px auto;
@@ -158,6 +158,7 @@ body {
   .Horarios h2, .Ubicacion h2 { font-size: 24px; }
   .Horarios p { font-size: 18px; }
 }
+
 
 
 
