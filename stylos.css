@@ -44,7 +44,7 @@ body {
 .Horarios p {
   font-size: 20px;
   font-family: 'Sacramento', cursive;
-  color: #5a2a45;
+ color: #7a4f61; /* color más suave, menos contrastante */
   margin-bottom: 15px;
 }
 .Horarios img { width: 100%; max-width: 600px; height: auto; display: block; margin: 30px auto; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); opacity: 0.8; }
@@ -62,7 +62,7 @@ body {
 .Ubicacion h2 {
   font-size: 28px;
   font-family: 'Pinyon Script', cursive;
-  color: #a14d70;
+  color: #7a4f61; /* color más suave, menos contrastante */
   font-weight: normal;
   margin-bottom: 20px;
   border-bottom: 2px solid #eac7d4;
@@ -77,3 +77,4 @@ body {
   .Horarios h2, .Ubicacion h2 { font-size: 24px; }
   .Horarios p { font-size: 18px; }
 }
+
