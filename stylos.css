@@ -13,52 +13,57 @@ body {
   margin: 0 auto;
   border-radius: 12px;
 }
+/* Imagen de portada */
 .logo {
-  width: 180px;         /* tamaño base para desktop */
-  max-width: 70%;       /* nunca más del 70% del ancho de la pantalla */
-  height: auto;         /* mantiene proporción */
+  width: 150px;        /* tamaño base más pequeño */
+  max-width: 50%;      /* nunca más del 50% del ancho de la pantalla */
+  height: auto;        /* mantiene proporción */
   display: block;
-  margin: 0 auto 20px auto; /* centrado y espacio debajo */
-  border-radius: 12px;  /* opcional, bordes redondeados */
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08); /* sombra ligera */
+  margin: 0 auto 15px auto; /* centrado y espacio debajo */
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
 }
 
 /* Ajuste para móviles */
 @media (max-width: 768px) {
   .logo {
-    width: 140px;       /* más pequeña en móviles */
-    max-width: 80%;
+    width: 120px;      /* más pequeña en móviles */
+    max-width: 70%;
+    margin-bottom: 10px;
   }
 }
 
+/* Contenedor del header */
 .titulo-container {
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 40px 20px;
-  gap: 15px; /* espacio entre elementos */
+  padding: 20px 10px; /* menos padding para que no se vea gigante */
+  gap: 10px;           /* espacio entre elementos */
 }
 
+/* Texto */
 .titulo-novios {
-  font-size: 50px;
+  font-size: 36px; /* más pequeño para que acompañe la imagen */
   margin: 0;
 }
 
 .subtitulo {
-  font-size: 24px;
+  font-size: 20px;
   color: #a14d70;
 }
 
+/* Botón */
 .boton-ingresar {
-  padding: 12px 25px;
+  padding: 10px 20px;
   background-color: #a14d70;
   color: white;
   border: none;
   border-radius: 10px;
   cursor: pointer;
-  font-size: 18px;
+  font-size: 16px;
   transition: 0.3s;
 }
 
@@ -129,6 +134,7 @@ body {
   .Horarios h2, .Ubicacion h2 { font-size: 24px; }
   .Horarios p { font-size: 18px; }
 }
+
 
 
 
