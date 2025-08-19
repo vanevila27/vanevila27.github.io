@@ -13,6 +13,24 @@ body {
   margin: 0 auto;
   border-radius: 12px;
 }
+.logo {
+  width: 180px;         /* tamaño base para desktop */
+  max-width: 70%;       /* nunca más del 70% del ancho de la pantalla */
+  height: auto;         /* mantiene proporción */
+  display: block;
+  margin: 0 auto 20px auto; /* centrado y espacio debajo */
+  border-radius: 12px;  /* opcional, bordes redondeados */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08); /* sombra ligera */
+}
+
+/* Ajuste para móviles */
+@media (max-width: 768px) {
+  .logo {
+    width: 140px;       /* más pequeña en móviles */
+    max-width: 80%;
+  }
+}
+
 .titulo-container {
   text-align: center;
   display: flex;
@@ -111,6 +129,7 @@ body {
   .Horarios h2, .Ubicacion h2 { font-size: 24px; }
   .Horarios p { font-size: 18px; }
 }
+
 
 
 
