@@ -32,7 +32,7 @@ body {
   max-width: 800px;
 }
 .Horarios h2 {
-  font-size: 28px;
+  font-size: 35px;
   font-family: 'Pinyon Script', cursive;
   color: #a14d70;
   font-weight: normal;
@@ -60,7 +60,7 @@ body {
   max-width: 800px;
 }
 .Ubicacion h2 {
-  font-size: 28px;
+  font-size: 35px;
   font-family: 'Pinyon Script', cursive;
   color: #7a4f61; /* color más suave, menos contrastante */
   font-weight: normal;
@@ -77,5 +77,6 @@ body {
   .Horarios h2, .Ubicacion h2 { font-size: 24px; }
   .Horarios p { font-size: 18px; }
 }
+
 
 
