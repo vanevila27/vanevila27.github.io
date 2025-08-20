@@ -2,7 +2,7 @@ body {
   font-family: 'Sacramento', cursive;
   margin: 0;
   padding: 0;
-  background-color: #fdcaca;
+  background-color: #fff1f6;
   color: #3e1a31;
   margin-top: 30px; /* 👈 espacio arriba solo de esta parte */
 }
@@ -160,6 +160,7 @@ body {
   .Horarios h2, .Ubicacion h2 { font-size: 24px; }
   .Horarios p { font-size: 18px; }
 }
+
 
 
 
