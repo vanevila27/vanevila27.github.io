@@ -115,7 +115,7 @@ body {
   max-width: 800px;
 }
 .Horarios h2 {
-  font-size: 40px;
+  font-size: 70px;
   font-family: 'Pinyon Script', cursive;
   color: #a14d70;
   font-weight: normal;
@@ -125,7 +125,7 @@ body {
   padding-bottom: 4px;
 }
 .Horarios p {
-  font-size: 20px;
+  font-size: 30px;
   font-family: 'Sacramento', cursive;
  color: #7a4f61; /* color más suave, menos contrastante */
   margin-bottom: 15px;
@@ -160,6 +160,7 @@ body {
   .Horarios h2, .Ubicacion h2 { font-size: 24px; }
   .Horarios p { font-size: 18px; }
 }
+
 
 
 
