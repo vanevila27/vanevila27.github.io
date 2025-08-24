@@ -2,7 +2,7 @@ body {
   font-family: 'Sacramento', cursive;
   margin: 0;
   padding: 0;
-  background-color: #fff1f6;
+  background-color: #f9f4f2;
   color: #3e1a31;
   margin-top: 30px; /* 👈 espacio arriba solo de esta parte */
 }
@@ -17,7 +17,8 @@ body {
 /* Imagen de portada */
 .logo {
   width: 80%;        /* ahora puede ocupar más del ancho */
-  max-width: 600px;  /* nunca más de 600px para que no se salga de la pantalla */
+  max-width: 80%;  /* nunca más de 600px para que no se salga de la pantalla */
+  background-color: #fff1f6;
   height: auto;
   display: block;
   margin: 0 auto 15px auto;
@@ -160,6 +161,7 @@ body {
   .Horarios h2, .Ubicacion h2 { font-size: 24px; }
   .Horarios p { font-size: 18px; }
 }
+
 
 
 
