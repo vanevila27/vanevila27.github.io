@@ -88,7 +88,7 @@ body {
     color: #8B4D6E;                         /* Color cálido, tipo vino o lila */
     text-align: center;                     /* Centrar el texto */
     line-height: 1.8;                       /* Separación entre líneas */
-    padding: 20px;                          /* Espacio alrededor del texto */
+    padding: 10px;                          /* Espacio alrededor del texto */
     background: rgba(255, 255, 255, 0.2);  /* Fondo suave y transparente */
     border-radius: 12px;                    /* Bordes redondeados */
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);/* Sombra sutil para destacar */
@@ -161,6 +161,7 @@ body {
   .Horarios h2, .Ubicacion h2 { font-size: 24px; }
   .Horarios p { font-size: 18px; }
 }
+
 
 
 
