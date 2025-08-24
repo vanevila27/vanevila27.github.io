@@ -34,32 +34,29 @@ const mapa = document.getElementById('mapa');
 const mapa = document.getElementById('mapa');
 // Puedes utilizar una API de mapas como Google Maps o Leaflet para mostrar el mapa
 
-const cancion = document.getElementById("cancion");
+document.addEventListener("DOMContentLoaded", function () {
+  const cancion = document.getElementById("cancion");
+  const boton = document.querySelector(".playBtn");
 
-// Comenzar desde 30 segundos
-cancion.currentTime = 30;
+  // Empezar desde 30 segundos
+  cancion.currentTime = 30;
 
-// Reproducir hasta 60 segundos y detener
-cancion.addEventListener("timeupdate", () => {
-  if (cancion.currentTime >= 60) {
-    cancion.pause();
-  }
-});
+  // Detener en 60 segundos
+  cancion.addEventListener("timeupdate", () => {
+    if (cancion.currentTime >= 60) {
+      cancion.pause();
+    }
+  });
 
-// Botones de música
-const botones = document.querySelectorAll(".playBtn");
-botones.forEach(boton => {
+  // Botón reproducir/pausar
   boton.addEventListener("click", () => {
     if (cancion.paused) {
       cancion.play();
-      botones.forEach(b => b.textContent = "⏸️ Pausar música");
+      boton.textContent = "⏸️ Pausar música";
     } else {
       cancion.pause();
-      botones.forEach(b => b.textContent = "🎵 Reproducir música");
+      boton.textContent = "🎵 Reproducir música";
     }
   });
 });
-
-
-
 
