@@ -34,3 +34,17 @@ const mapa = document.getElementById('mapa');
 const mapa = document.getElementById('mapa');
 // Puedes utilizar una API de mapas como Google Maps o Leaflet para mostrar el mapa
 
+const cancion = document.getElementById("cancion");
+
+// Empezar desde 30 segundos
+cancion.currentTime = 30;
+
+// Escuchar cuando llegue a 60 segundos y detenerla
+cancion.addEventListener("timeupdate", () => {
+  if (cancion.currentTime >= 60) {
+    cancion.pause();
+  }
+});
+
+
+
