@@ -82,7 +82,11 @@ body {
 .anterior:hover, .siguiente:hover { background-color: rgba(0,0,0,0.7); }
 
 .bienvenida {
-  text-align: center;
+  display: flex;               /* usamos flexbox */
+  flex-direction: column;      /* apilamos en columna */
+  align-items: center;         /* centrado horizontal */
+  justify-content: center;     /* centrado vertical (si le das altura fija) */
+  text-align: center;          /* asegura centrado del texto */
   padding: 40px 20px;
   background: linear-gradient(135deg, #fff1f6, #ffe6ec);
   color: #7a4f61;
@@ -103,6 +107,7 @@ body {
   font-family: 'Sacramento', cursive;
   animation: fadeIn 3s ease-in-out;
 }
+
 
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(-10px); }
@@ -236,6 +241,7 @@ body {
   .Horarios h2, .Ubicacion h2 { font-size: 26px; }
   .Horarios p { font-size: 20px; }
 }
+
 
 
 
