@@ -118,6 +118,7 @@ body {
   justify-content: center;     /* centrado vertical (si le das altura fija) */
   text-align: center;          /* asegura centrado del texto */
   padding: 40px 20px;
+  margin: 15px auto;        /* margen pequeño arriba y abajo */
   background: linear-gradient(135deg, #fff1f6, #ffe6ec);
   color: #7a4f61;
   font-family: 'Pinyon Script', cursive;
@@ -271,6 +272,7 @@ body {
   .Horarios h2, .Ubicacion h2 { font-size: 26px; }
   .Horarios p { font-size: 20px; }
 }
+
 
 
 
