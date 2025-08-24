@@ -81,6 +81,33 @@ body {
 .anterior, .siguiente { position: absolute; top: 50%; transform: translateY(-50%); background-color: rgba(0,0,0,0.5); color: white; border: none; padding: 12px; font-size: 24px; cursor: pointer; border-radius: 50%; }
 .anterior:hover, .siguiente:hover { background-color: rgba(0,0,0,0.7); }
 
+.bienvenida {
+  text-align: center;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #fff1f6, #ffe6ec);
+  color: #7a4f61;
+  font-family: 'Pinyon Script', cursive;
+  border-radius: 0 0 20px 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.bienvenida h1 {
+  font-size: 60px;
+  margin: 0;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.bienvenida p {
+  font-size: 24px;
+  margin-top: 10px;
+  font-family: 'Sacramento', cursive;
+  animation: fadeIn 3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
 
 #nosotros {
     font-family: 'Dancing Script', cursive; /* Una fuente romántica y elegante */
@@ -209,6 +236,7 @@ body {
   .Horarios h2, .Ubicacion h2 { font-size: 26px; }
   .Horarios p { font-size: 20px; }
 }
+
 
 
 
