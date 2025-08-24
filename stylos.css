@@ -160,13 +160,40 @@ body {
   border-radius: 15px; 
   box-shadow: 0 4px 10px rgba(0,0,0,0.1); 
 }
-  
+
+.confirmar form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+.confirmar input, .confirmar button {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+.confirmar button {
+  background-color: #a14d70;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.confirmar button:hover {
+  background-color: #7a4f61;
+}
+
+
+
 /* Responsive */
 @media (max-width: 768px) {
   .Horarios, .Ubicacion { max-width: 100%; padding: 15px; }
   .Horarios h2, .Ubicacion h2 { font-size: 26px; }
   .Horarios p { font-size: 20px; }
 }
+
 
 
 
