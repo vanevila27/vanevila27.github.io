@@ -105,61 +105,67 @@ body {
 }
 
 
+
 /* Horarios */
 .Horarios {
   text-align: center;
-  padding: 20px 10px;
-  background-color: #fff1f6 /* Lavanda muy suave */
-  border-radius: 20px; /* bordes más redondeados */
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);/* sombra más suave */
-  margin: 30px auto;
+  padding: 15px 10px; /* 👈 menos padding */
+  background-color: #fff7fa; /* 👈 color diferente al body */
+  border-radius: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  margin: 20px auto; /* 👈 menos espacio entre secciones */
   max-width: 800px;
-}
+  
 .Horarios h2 {
-  font-size: 70px;
+  font-size: 60px; /* un poco más chico que antes para no desproporcionar */
   font-family: 'Pinyon Script', cursive;
   color: #a14d70;
   font-weight: normal;
-  margin: 20px 0 10px;
+  margin: 15px 0 10px;
   border-bottom: 2px solid #eac7d4;
   display: inline-block;
   padding-bottom: 4px;
 }
 .Horarios p {
-  font-size: 30px;
+  font-size: 34px; /* 👈 agrandado */
   font-family: 'Sacramento', cursive;
- color: #7a4f61; /* color más suave, menos contrastante */
-  margin-bottom: 15px;
+  color: #7a4f61;
+  margin-bottom: 10px;
 }
 .Horarios img { width: 100%; max-width: 600px; height: auto; display: block; margin: 30px auto; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); opacity: 0.8; }
 
 /* Ubicación */
 .Ubicacion {
   text-align: center;
-  padding: 30px 20px;
-  background-color: #fff1f6 /* Lavanda muy suave */
-  border-radius: 20px; /* bordes más redondeados */
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);/* sombra más suave */
-  margin: 30px auto;
+  padding: 15px 10px; /* 👈 menos padding */
+  background-color: #fdf1f3; /* 👈 color suave pero distinto del de Horarios */
+  border-radius: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  margin: 20px auto;
   max-width: 800px;
 }
 .Ubicacion h2 {
-  font-size: 40px;
+  font-size: 45px; /* 👈 un poquito más grande */
   font-family: 'Pinyon Script', cursive;
-  color: #7a4f61; /* color más suave, menos contrastante */
+  color: #7a4f61;
   font-weight: normal;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   border-bottom: 2px solid #eac7d4;
   display: inline-block;
   padding-bottom: 4px;
 }
-.Ubicacion iframe { width: 100%; height: 300px; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
-
+.Ubicacion iframe { 
+  width: 100%; 
+  height: 300px; 
+  border-radius: 15px; 
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1); 
+}
+  
 /* Responsive */
 @media (max-width: 768px) {
-  .Horarios, .Ubicacion { max-width: 100%; padding: 20px; }
-  .Horarios h2, .Ubicacion h2 { font-size: 24px; }
-  .Horarios p { font-size: 18px; }
+  .Horarios, .Ubicacion { max-width: 100%; padding: 15px; }
+  .Horarios h2, .Ubicacion h2 { font-size: 26px; }
+  .Horarios p { font-size: 20px; }
 }
 
 
