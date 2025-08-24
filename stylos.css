@@ -161,27 +161,38 @@ body {
   box-shadow: 0 4px 10px rgba(0,0,0,0.1); 
 }
 
-.confirmar form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  max-width: 400px;
-  margin: 0 auto;
+.confirmar {
+  text-align: center;
+  padding: 30px 20px;
+  margin: 30px auto;
+  max-width: 700px;
+  background-color: #ffe6ec;
+  border-radius: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
-.confirmar input, .confirmar button {
-  padding: 12px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  font-size: 16px;
+.confirmar h2 {
+  font-family: 'Pinyon Script', cursive;
+  font-size: 40px;
+  color: #a14d70;
+  margin-bottom: 15px;
 }
-.confirmar button {
+.confirmar p {
+  font-family: 'Sacramento', cursive;
+  font-size: 26px;
+  color: #7a4f61;
+  margin-bottom: 20px;
+}
+.boton-confirmar {
+  display: inline-block;
+  padding: 12px 24px;
   background-color: #a14d70;
   color: white;
-  border: none;
-  cursor: pointer;
+  text-decoration: none;
+  border-radius: 12px;
+  font-size: 20px;
   transition: background 0.3s;
 }
-.confirmar button:hover {
+.boton-confirmar:hover {
   background-color: #7a4f61;
 }
 
@@ -193,6 +204,7 @@ body {
   .Horarios h2, .Ubicacion h2 { font-size: 26px; }
   .Horarios p { font-size: 20px; }
 }
+
 
 
 
