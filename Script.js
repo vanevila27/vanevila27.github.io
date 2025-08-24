@@ -36,15 +36,30 @@ const mapa = document.getElementById('mapa');
 
 const cancion = document.getElementById("cancion");
 
-// Empezar desde 30 segundos
+// Comenzar desde 30 segundos
 cancion.currentTime = 30;
 
-// Escuchar cuando llegue a 60 segundos y detenerla
+// Reproducir hasta 60 segundos y detener
 cancion.addEventListener("timeupdate", () => {
   if (cancion.currentTime >= 60) {
     cancion.pause();
   }
 });
+
+// Botones de música
+const botones = document.querySelectorAll(".playBtn");
+botones.forEach(boton => {
+  boton.addEventListener("click", () => {
+    if (cancion.paused) {
+      cancion.play();
+      botones.forEach(b => b.textContent = "⏸️ Pausar música");
+    } else {
+      cancion.pause();
+      botones.forEach(b => b.textContent = "🎵 Reproducir música");
+    }
+  });
+});
+
 
 
 
