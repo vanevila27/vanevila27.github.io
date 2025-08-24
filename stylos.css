@@ -6,15 +6,15 @@ body {
   color: #3e1a31;
   margin-top: 30px; /* 👈 espacio arriba solo de esta parte */
   /* Contenedor de música (puede estar en cualquier sección) */
+}
 .musica {
   text-align: center;
   margin: 20px auto;
 }
 
-/* Botón de reproducir/pausar música */
 .playBtn {
   padding: 12px 25px;
-  background-color: #a14d70; /* color romántico */
+  background-color: #a14d70;
   color: white;
   font-size: 18px;
   border: none;
@@ -26,24 +26,16 @@ body {
 
 .playBtn:hover {
   background-color: #7a4f61;
-  transform: scale(1.05); /* efecto de crecer al pasar el mouse */
+  transform: scale(1.05);
 }
 
-/* Opcional: botón en versión más pequeña para móviles */
 @media (max-width: 768px) {
   .playBtn {
     font-size: 16px;
     padding: 10px 20px;
   }
-}
 
-/* Ejemplo de contenedor para integrar en Horarios o Ubicación */
-.Horarios .musica,
-.Ubicacion .musica {
-  margin-top: 15px; /* separación del contenido principal */
-}
 
-}
 
 .invitacion img {
   width: 100%;
@@ -279,6 +271,7 @@ body {
   .Horarios h2, .Ubicacion h2 { font-size: 26px; }
   .Horarios p { font-size: 20px; }
 }
+
 
 
 
