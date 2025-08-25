@@ -38,16 +38,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const cancion = document.getElementById("cancion");
   const boton = document.querySelector(".playBtn");
 
-  // Empezar desde 30 segundos
-  cancion.currentTime = 30;
-
-  // Detener en 60 segundos
-  cancion.addEventListener("timeupdate", () => {
-    if (cancion.currentTime >= 60) {
-      cancion.pause();
-    }
-  });
-
   // Botón reproducir/pausar
   boton.addEventListener("click", () => {
     if (cancion.paused) {
@@ -59,4 +49,3 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
-
