@@ -65,8 +65,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // ======= MÚSICA =======
   const playBtn = document.getElementById('playBtn');
-  const audio = new Audio('harold_elena_por_siempre.mp3'); // tu archivo
+  const audio = new Audio('harold_elena_por_siempre.mp3'); // tu archivo de música
+  audio.loop = true; // para que siga sonando en bucle
 
+  // Intentar reproducir automáticamente (algunos navegadores requieren interacción del usuario)
+  audio.play().catch(() => {
+    console.log("El navegador bloqueó la reproducción automática. El usuario debe hacer clic en el botón.");
+  });
+
+  // Botón play/pause
   playBtn.addEventListener('click', () => {
     if(audio.paused){
       audio.play();
