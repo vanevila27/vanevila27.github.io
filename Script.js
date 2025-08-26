@@ -67,3 +67,6 @@ function actualizarCronometro() {
 actualizarCronometro();
 // Luego actualizar cada segundo
 const intervalo = setInterval(actualizarCronometro, 1000);
+  });
+
+
