@@ -62,6 +62,11 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById("minutos").textContent = minutos.toString().padStart(2,'0');
     document.getElementById("segundos").textContent = segundos.toString().padStart(2,'0');
   }, 1000);
+    // Ejecutar inmediatamente
+    actualizarCronometro();
+
+    // Actualizar cada segundo
+    const intervalo = setInterval(actualizarCronometro, 1000);
 
 });
 
@@ -69,6 +74,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
  
+
 
 
 
