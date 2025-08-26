@@ -1,28 +1,36 @@
-document.addEventListener("DOMContentLoaded", function () {
-  // 🎠 Carrusel
-  const carrusel = document.querySelector(".carrusel");
-  const imagenes = document.querySelectorAll(".carrusel img");
-  const anteriorBtn = document.querySelector(".anterior");
-  const siguienteBtn = document.querySelector(".siguiente");
+document.addEventListener('DOMContentLoaded', function () {
+  const carrusel = document.querySelector('.carrusel');
+  const imagenes = document.querySelectorAll('.carrusel img');
+  const puntosContainer = document.getElementById('puntos');
+
   let currentIndex = 0;
 
-  if (carrusel && imagenes.length > 0) {
-    const imagenAncho = imagenes[0].offsetWidth;
-
-    function moverCarrusel(index) {
-      carrusel.scrollLeft = imagenAncho * index;
-    }
-
-    anteriorBtn.addEventListener("click", () => {
-      currentIndex = (currentIndex - 1 + imagenes.length) % imagenes.length;
-      moverCarrusel(currentIndex);
+  // Crear los puntos
+  imagenes.forEach((_, index) => {
+    const punto = document.createElement('span');
+    punto.classList.add('punto');
+    if (index === 0) punto.classList.add('activo');
+    punto.addEventListener('click', () => {
+      currentIndex = index;
+      moverCarrusel(index);
+      actualizarPuntos();
     });
+    puntosContainer.appendChild(punto);
+  });
 
-    siguienteBtn.addEventListener("click", () => {
-      currentIndex = (currentIndex + 1) % imagenes.length;
-      moverCarrusel(currentIndex);
+  const puntos = document.querySelectorAll('.punto');
+
+  function moverCarrusel(index) {
+    const imagenAncho = imagenes[0].offsetWidth;
+    carrusel.scrollLeft = imagenAncho * index;
+  }
+
+  function actualizarPuntos() {
+    puntos.forEach((p, i) => {
+      p.classList.toggle('activo', i === currentIndex);
     });
   }
+});
 
   // 🗺️ Mapa (en caso de que lo uses después con API)
   const mapa = document.getElementById("mapa");
@@ -43,3 +51,4 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+
