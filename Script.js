@@ -68,5 +68,13 @@ actualizarCronometro();
 // Luego actualizar cada segundo
 const intervalo = setInterval(actualizarCronometro, 1000);
   });
+const playBtn = document.getElementById('playBtn');
+const audio = new Audio('asiesnuestroamor.mp3'); // tu archivo de música
+
+playBtn.addEventListener('click', () => {
+  audio.play();
+});
+
+
 
 
