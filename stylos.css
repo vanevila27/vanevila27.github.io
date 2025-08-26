@@ -264,6 +264,7 @@ body {
   max-width: 600px; /* Ajusta el tamaño máximo del carrusel */
   margin: 0 auto;
   overflow: hidden;
+  margin-top:20px;
 }
 
 .carrusel {
@@ -303,6 +304,7 @@ body {
   font-size: 28px;
   font-family: 'Sacramento', cursive;
 }
+
 
 
 
