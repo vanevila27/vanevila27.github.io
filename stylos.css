@@ -109,7 +109,7 @@ body {
   text-align: center;          /* asegura centrado del texto */
   padding: 40px 20px;
   margin: 15px auto;        /* margen pequeño arriba y abajo */
-  background: linear-gradient(135deg, #fff1f6, #ffe6ec);
+  background: linear-gradient(135deg, #fff6f8, #fffafc); /* rosa muy suave */
   color: #7a4f61;
   font-family: 'Pinyon Script', cursive;
   border-radius: 0 0 20px 20px;
@@ -308,6 +308,7 @@ body {
   font-size: 28px;
   font-family: 'Sacramento', cursive;
 }
+
 
 
 
