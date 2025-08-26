@@ -291,6 +291,29 @@ body {
   .Horarios p { font-size: 20px; }
 }
 
+  .carrusel-container {
+  width: 100%;
+  max-width: 600px; /* Ajusta el tamaño máximo del carrusel */
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.carrusel {
+  display: flex;
+  gap: 10px;
+  scroll-snap-type: x mandatory;
+}
+
+.carrusel img {
+  width: 100%;
+  height: auto;
+  flex-shrink: 0;
+  scroll-snap-align: center;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
 
 
 
