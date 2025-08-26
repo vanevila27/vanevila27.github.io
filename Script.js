@@ -35,4 +35,29 @@ document.addEventListener('DOMContentLoaded', function () {
   // 🗺️ Mapa (en caso de que lo uses después con API)
   const mapa = document.getElementById("mapa");
 
+// Fecha de la boda
+const fechaBoda = new Date("September 25, 2025 00:00:00").getTime();
+
+const timer = setInterval(function() {
+  const ahora = new Date().getTime();
+  const distancia = fechaBoda - ahora;
+
+  const dias = Math.floor(distancia / (1000 * 60 * 60 * 24));
+  const horas = Math.floor((distancia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutos = Math.floor((distancia % (1000 * 60 * 60)) / (1000 * 60));
+  const segundos = Math.floor((distancia % (1000 * 60)) / 1000);
+
+  document.getElementById("dias").innerText = dias.toString().padStart(2, '0');
+  document.getElementById("horas").innerText = horas.toString().padStart(2, '0');
+  document.getElementById("minutos").innerText = minutos.toString().padStart(2, '0');
+  document.getElementById("segundos").innerText = segundos.toString().padStart(2, '0');
+
+  if (distancia < 0) {
+    clearInterval(timer);
+    document.getElementById("timer").innerHTML = "¡Hoy es nuestra boda! 💍";
+  }
+}, 1000);
+
+
  
+
