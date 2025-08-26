@@ -42,10 +42,10 @@ document.addEventListener('DOMContentLoaded', function () {
  const fechaBoda = new Date("2025-10-11T18:30:00").getTime();
 
 
-  const timerInterval = setInterval(() => {
-    const ahora = new Date().getTime();
-    const distancia = fechaBoda - ahora;
-
+  function actualizarCronometro() {
+  const ahora = new Date().getTime();
+  const distancia = fechaBoda - ahora;
+    
     if(distancia <= 0){
       clearInterval(timerInterval);
       document.getElementById("timer").innerHTML = "¡Hoy es nuestra boda! 💍";
@@ -74,6 +74,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
  
+
 
 
 
