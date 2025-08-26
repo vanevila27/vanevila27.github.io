@@ -319,10 +319,14 @@ body {
   margin: 15px 0; /* espacio entre botón y cronómetro */
   transition: background 0.3s;
 }
+  /* 👇 Hacer el texto cursiva y elegante */
+  font-family: 'Sacramento', cursive;
+  font-style: italic; 
 
 .playBtn:hover {
   background-color: #7a4f61;
 }
+
 
 
 
