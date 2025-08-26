@@ -7,27 +7,8 @@ body {
   margin-top: 30px; /* 👈 espacio arriba solo de esta parte */
   /* Contenedor de música (puede estar en cualquier sección) */
 }
-.musica {
-  text-align: center;
-  margin: 20px auto;
-}
 
-.playBtn {
-  padding: 12px 25px;
-  background-color: #a14d70;
-  color: white;
-  font-size: 18px;
-  border: none;
-  border-radius: 25px;
-  cursor: pointer;
-  transition: background 0.3s, transform 0.2s;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
 
-.playBtn:hover {
-  background-color: #7a4f61;
-  transform: scale(1.05);
-}
 
 @media (max-width: 768px) {
   .playBtn {
@@ -55,16 +36,6 @@ body {
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.08);
 }
-
-/* Ajuste para móviles */
-@media (max-width: 768px) {
-  .logo {
-    width: 90%;       /* más pequeña en móviles */
-    max-width: none;  /* quitar límite máximo */
-    margin-bottom: 10px;
-  }
-
-
 
 /* Contenedor del header */
 .titulo-container {
@@ -313,6 +284,7 @@ body {
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
+
 
 
 
