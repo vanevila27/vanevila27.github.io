@@ -305,13 +305,15 @@ body {
 }
 
 .carrusel img {
-  width: 100%;
-  height: auto;
+  width: 100%;       /* ocupa todo el ancho del contenedor */
+  max-height: 400px; /* altura máxima deseada */
+  object-fit: cover; /* recorta la imagen sin deformarla */
   flex-shrink: 0;
   scroll-snap-align: center;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
+
 
 
 
