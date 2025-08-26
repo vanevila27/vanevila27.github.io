@@ -200,15 +200,18 @@ body {
 .Horarios img { width: 100%; max-width: 600px; height: auto; display: block; margin: 30px auto; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); opacity: 0.8; }
 
 /* Ubicación */
-.Ubicacion {
+.ubicacion {
   text-align: center;
-  padding: 15px 10px; /* 👈 menos padding */
-  background-color: #fdf1f3; /* 👈 color suave pero distinto del de Horarios */
-  border-radius: 20px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-  margin: 20px auto;
-  max-width: 800px;
+  background: linear-gradient(135deg, #fff8fa, #ffeef2);
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  margin: 30px auto;
+  max-width: 600px;
+  color: #7a4f61;
+  font-family: 'Pinyon Script', cursive;
 }
+
 .Ubicacion h2 {
   font-size: 45px; /* 👈 un poquito más grande */
   font-family: 'Pinyon Script', cursive;
@@ -336,6 +339,7 @@ body {
 .playBtn:hover {
   background-color: #7a4f61;
 }
+
 
 
 
