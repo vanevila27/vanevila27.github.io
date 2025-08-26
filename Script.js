@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
+  // ======= CARRUSEL =======
   const carrusel = document.querySelector('.carrusel');
   const imagenes = document.querySelectorAll('.carrusel img');
   const puntosContainer = document.getElementById('puntos');
@@ -30,14 +31,14 @@ document.addEventListener('DOMContentLoaded', function () {
       p.classList.toggle('activo', i === currentIndex);
     });
   }
-});
 
-  // 🗺️ Mapa (en caso de que lo uses después con API)
-  const mapa = document.getElementById("mapa");
+  // Actualizar puntos al hacer scroll manual
+  carrusel.addEventListener('scroll', () => {
+    const index = Math.round(carrusel.scrollLeft / carrusel.offsetWidth);
+    puntos.forEach((p, i) => p.classList.toggle('activo', i === index));
+  });
 
-// Fecha de la boda
-document.addEventListener("DOMContentLoaded", function() {
-  // Cronómetro
+  // ======= CRONÓMETRO =======
   const fechaBoda = new Date("October 11, 2025 18:30:00").getTime();
 
   const timerInterval = setInterval(() => {
@@ -61,20 +62,13 @@ document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("segundos").textContent = segundos.toString().padStart(2,'0');
   }, 1000);
 
-  // Carrusel (puntos)
-  const carrusel = document.querySelector('.carrusel');
-  const puntos = document.querySelectorAll('.punto');
-
-  carrusel.addEventListener('scroll', () => {
-    const index = Math.round(carrusel.scrollLeft / carrusel.offsetWidth);
-    puntos.forEach((p, i) => p.classList.toggle('activo', i === index));
-  });
 });
 
 
 
 
  
+
 
 
 
