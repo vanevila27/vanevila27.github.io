@@ -14,6 +14,10 @@ body {
     padding: 10px 20px;
   }
 
+ .invitacion {
+  margin-bottom: 20px; /* espacio debajo de la invitación */
+}
+
 
 .invitacion img {
   width: 100%;
@@ -304,6 +308,7 @@ body {
   font-size: 28px;
   font-family: 'Sacramento', cursive;
 }
+
 
 
 
