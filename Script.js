@@ -39,7 +39,8 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   // ======= CRONÓMETRO =======
-  const fechaBoda = new Date("October 11, 2025 18:30:00").getTime();
+ const fechaBoda = new Date("2025-10-11T18:30:00").getTime();
+
 
   const timerInterval = setInterval(() => {
     const ahora = new Date().getTime();
@@ -68,6 +69,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
  
+
 
 
 
