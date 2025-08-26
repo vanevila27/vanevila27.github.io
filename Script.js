@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const mapa = document.getElementById("mapa");
 
 // Fecha de la boda
-const fechaBoda = new Date("September 25, 2025 00:00:00").getTime();
+const fechaBoda = new Date("October 11, 2025 18:30:00").getTime();
 
 const timer = setInterval(function() {
   const ahora = new Date().getTime();
@@ -60,4 +60,5 @@ const timer = setInterval(function() {
 
 
  
+
 
