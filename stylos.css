@@ -21,8 +21,8 @@ body {
 
 .invitacion img {
   width: 100%;
-  height: 500px;
-  
+  height: 500px; /* ajustá a lo que quieras */
+  object-fit: cover; /* recorta sin deformar */
   display: block;
   margin: 0 auto;
   border-radius: 12px;
@@ -327,6 +327,7 @@ body {
 .playBtn:hover {
   background-color: #7a4f61;
 }
+
 
 
 
