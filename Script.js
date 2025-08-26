@@ -37,33 +37,45 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // Fecha de la boda
 document.addEventListener("DOMContentLoaded", function() {
-  // Fecha de la boda: 11 de octubre de 2025 a las 18:30
+  // Cronómetro
   const fechaBoda = new Date("October 11, 2025 18:30:00").getTime();
 
-  const timer = setInterval(function() {
+  const timerInterval = setInterval(() => {
     const ahora = new Date().getTime();
     const distancia = fechaBoda - ahora;
+
+    if(distancia <= 0){
+      clearInterval(timerInterval);
+      document.getElementById("timer").innerHTML = "¡Hoy es nuestra boda! 💍";
+      return;
+    }
 
     const dias = Math.floor(distancia / (1000 * 60 * 60 * 24));
     const horas = Math.floor((distancia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     const minutos = Math.floor((distancia % (1000 * 60 * 60)) / (1000 * 60));
     const segundos = Math.floor((distancia % (1000 * 60)) / 1000);
 
-    document.getElementById("dias").innerText = dias.toString().padStart(2, '0');
-    document.getElementById("horas").innerText = horas.toString().padStart(2, '0');
-    document.getElementById("minutos").innerText = minutos.toString().padStart(2, '0');
-    document.getElementById("segundos").innerText = segundos.toString().padStart(2, '0');
-
-    if (distancia < 0) {
-      clearInterval(timer);
-      document.getElementById("timer").innerHTML = "¡Hoy es nuestra boda! 💍";
-    }
+    document.getElementById("dias").textContent = dias.toString().padStart(2,'0');
+    document.getElementById("horas").textContent = horas.toString().padStart(2,'0');
+    document.getElementById("minutos").textContent = minutos.toString().padStart(2,'0');
+    document.getElementById("segundos").textContent = segundos.toString().padStart(2,'0');
   }, 1000);
+
+  // Carrusel (puntos)
+  const carrusel = document.querySelector('.carrusel');
+  const puntos = document.querySelectorAll('.punto');
+
+  carrusel.addEventListener('scroll', () => {
+    const index = Math.round(carrusel.scrollLeft / carrusel.offsetWidth);
+    puntos.forEach((p, i) => p.classList.toggle('activo', i === index));
+  });
 });
 
 
 
+
  
+
 
 
 
