@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   let currentIndex = 0;
 
+  // Crear los puntos
   imagenes.forEach((_, index) => {
     const punto = document.createElement('span');
     punto.classList.add('punto');
@@ -31,6 +32,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
+  // Actualizar puntos al hacer scroll manual
   carrusel.addEventListener('scroll', () => {
     const index = Math.round(carrusel.scrollLeft / carrusel.offsetWidth);
     puntos.forEach((p, i) => p.classList.toggle('activo', i === index));
@@ -43,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const ahora = new Date().getTime();
     const distancia = fechaBoda - ahora;
 
-    if(distancia <= 0){
+    if (distancia <= 0) {
       document.getElementById("timer").innerHTML = "¡Hoy es nuestra boda! 💍";
       clearInterval(intervalo);
       return;
@@ -54,33 +56,24 @@ document.addEventListener('DOMContentLoaded', function () {
     const minutos = Math.floor((distancia % (1000 * 60 * 60)) / (1000 * 60));
     const segundos = Math.floor((distancia % (1000 * 60)) / 1000);
 
-    document.getElementById("dias").textContent = dias.toString().padStart(2,'0');
-    document.getElementById("horas").textContent = horas.toString().padStart(2,'0');
-    document.getElementById("minutos").textContent = minutos.toString().padStart(2,'0');
-    document.getElementById("segundos").textContent = segundos.toString().padStart(2,'0');
+    document.getElementById("dias").textContent = dias.toString().padStart(2, '0');
+    document.getElementById("horas").textContent = horas.toString().padStart(2, '0');
+    document.getElementById("minutos").textContent = minutos.toString().padStart(2, '0');
+    document.getElementById("segundos").textContent = segundos.toString().padStart(2, '0');
   }
 
+  // Ejecutar inmediatamente
   actualizarCronometro();
+  // Luego actualizar cada segundo
   const intervalo = setInterval(actualizarCronometro, 1000);
 
   // ======= MÚSICA =======
   const playBtn = document.getElementById('playBtn');
   const audio = new Audio('harold_elena_por_siempre.mp3'); // tu archivo de música
-  audio.loop = true; // para que siga sonando en bucle
 
-  // Intentar reproducir automáticamente (algunos navegadores requieren interacción del usuario)
-  audio.play().catch(() => {
-    console.log("El navegador bloqueó la reproducción automática. El usuario debe hacer clic en el botón.");
-  });
-
-  // Botón play/pause
   playBtn.addEventListener('click', () => {
-    if(audio.paused){
-      audio.play();
-      playBtn.textContent = "⏸️ Pausar música";
-    } else {
-      audio.pause();
-      playBtn.textContent = "🎵 Reproducir música";
-    }
+    audio.currentTime = 10; // empieza desde el segundo 10
+    audio.play();
   });
 });
+
