@@ -38,47 +38,32 @@ document.addEventListener('DOMContentLoaded', function () {
     puntos.forEach((p, i) => p.classList.toggle('activo', i === index));
   });
 
-  // ======= CRONÓMETRO =======
- const fechaBoda = new Date("2025-10-11T18:30:00").getTime();
 
+// ======= CRONÓMETRO =======
+const fechaBoda = new Date("2025-10-11T18:30:00").getTime();
 
-  function actualizarCronometro() {
+function actualizarCronometro() {
   const ahora = new Date().getTime();
   const distancia = fechaBoda - ahora;
-    
-    if(distancia <= 0){
-      clearInterval(timerInterval);
-      document.getElementById("timer").innerHTML = "¡Hoy es nuestra boda! 💍";
-      return;
-    }
 
-    const dias = Math.floor(distancia / (1000 * 60 * 60 * 24));
-    const horas = Math.floor((distancia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutos = Math.floor((distancia % (1000 * 60 * 60)) / (1000 * 60));
-    const segundos = Math.floor((distancia % (1000 * 60)) / 1000);
+  if(distancia <= 0){
+    document.getElementById("timer").innerHTML = "¡Hoy es nuestra boda! 💍";
+    clearInterval(intervalo);
+    return;
+  }
 
-    document.getElementById("dias").textContent = dias.toString().padStart(2,'0');
-    document.getElementById("horas").textContent = horas.toString().padStart(2,'0');
-    document.getElementById("minutos").textContent = minutos.toString().padStart(2,'0');
-    document.getElementById("segundos").textContent = segundos.toString().padStart(2,'0');
-  }, 1000);
-    // Ejecutar inmediatamente
-    actualizarCronometro();
+  const dias = Math.floor(distancia / (1000 * 60 * 60 * 24));
+  const horas = Math.floor((distancia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutos = Math.floor((distancia % (1000 * 60 * 60)) / (1000 * 60));
+  const segundos = Math.floor((distancia % (1000 * 60)) / 1000);
 
-    // Actualizar cada segundo
-    const intervalo = setInterval(actualizarCronometro, 1000);
+  document.getElementById("dias").textContent = dias.toString().padStart(2,'0');
+  document.getElementById("horas").textContent = horas.toString().padStart(2,'0');
+  document.getElementById("minutos").textContent = minutos.toString().padStart(2,'0');
+  document.getElementById("segundos").textContent = segundos.toString().padStart(2,'0');
+}
 
-});
-
-
-
-
- 
-
-
-
-
-
-
-
-
+// Ejecutar inmediatamente
+actualizarCronometro();
+// Luego actualizar cada segundo
+const intervalo = setInterval(actualizarCronometro, 1000);
