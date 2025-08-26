@@ -13,7 +13,16 @@ body {
     font-size: 16px;
     padding: 10px 20px;
   }
+.portada img {
+  width: 100%;
+  height: auto;
+  max-height: 600px;   /* controla lo larga que se ve */
+  object-fit: cover;   /* hace que la imagen se recorte sin deformarse */
+  display: block;
+  margin: 0 auto;
+}
 
+  
  .invitacion {
   margin-bottom: 20px; /* espacio debajo de la invitación */
 }
@@ -327,6 +336,7 @@ body {
 .playBtn:hover {
   background-color: #7a4f61;
 }
+
 
 
 
