@@ -35,20 +35,4 @@ document.addEventListener('DOMContentLoaded', function () {
   // 🗺️ Mapa (en caso de que lo uses después con API)
   const mapa = document.getElementById("mapa");
 
-  // 🎵 Música
-  const cancion = document.getElementById("cancion");
-  const boton = document.querySelector(".playBtn");
-
-  if (cancion && boton) {
-    boton.addEventListener("click", () => {
-      if (cancion.paused) {
-        cancion.play();
-        boton.textContent = "⏸️ Pausar música";
-      } else {
-        cancion.pause();
-        boton.textContent = "🎵 Reproducir música";
-      }
-    });
-  }
-});
-
+ 
