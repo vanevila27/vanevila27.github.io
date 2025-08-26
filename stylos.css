@@ -308,6 +308,22 @@ body {
   font-size: 28px;
   font-family: 'Sacramento', cursive;
 }
+.playBtn {
+  padding: 10px 20px;
+  background-color: #a14d70;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 18px;
+  margin: 15px 0; /* espacio entre botón y cronómetro */
+  transition: background 0.3s;
+}
+
+.playBtn:hover {
+  background-color: #7a4f61;
+}
+
 
 
 
