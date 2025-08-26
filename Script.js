@@ -6,7 +6,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
   let currentIndex = 0;
 
-  // Crear los puntos
   imagenes.forEach((_, index) => {
     const punto = document.createElement('span');
     punto.classList.add('punto');
@@ -32,49 +31,49 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // Actualizar puntos al hacer scroll manual
   carrusel.addEventListener('scroll', () => {
     const index = Math.round(carrusel.scrollLeft / carrusel.offsetWidth);
     puntos.forEach((p, i) => p.classList.toggle('activo', i === index));
   });
 
+  // ======= CRONÓMETRO =======
+  const fechaBoda = new Date("2025-10-11T18:30:00").getTime();
 
-// ======= CRONÓMETRO =======
-const fechaBoda = new Date("2025-10-11T18:30:00").getTime();
+  function actualizarCronometro() {
+    const ahora = new Date().getTime();
+    const distancia = fechaBoda - ahora;
 
-function actualizarCronometro() {
-  const ahora = new Date().getTime();
-  const distancia = fechaBoda - ahora;
+    if(distancia <= 0){
+      document.getElementById("timer").innerHTML = "¡Hoy es nuestra boda! 💍";
+      clearInterval(intervalo);
+      return;
+    }
 
-  if(distancia <= 0){
-    document.getElementById("timer").innerHTML = "¡Hoy es nuestra boda! 💍";
-    clearInterval(intervalo);
-    return;
+    const dias = Math.floor(distancia / (1000 * 60 * 60 * 24));
+    const horas = Math.floor((distancia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutos = Math.floor((distancia % (1000 * 60 * 60)) / (1000 * 60));
+    const segundos = Math.floor((distancia % (1000 * 60)) / 1000);
+
+    document.getElementById("dias").textContent = dias.toString().padStart(2,'0');
+    document.getElementById("horas").textContent = horas.toString().padStart(2,'0');
+    document.getElementById("minutos").textContent = minutos.toString().padStart(2,'0');
+    document.getElementById("segundos").textContent = segundos.toString().padStart(2,'0');
   }
 
-  const dias = Math.floor(distancia / (1000 * 60 * 60 * 24));
-  const horas = Math.floor((distancia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  const minutos = Math.floor((distancia % (1000 * 60 * 60)) / (1000 * 60));
-  const segundos = Math.floor((distancia % (1000 * 60)) / 1000);
+  actualizarCronometro();
+  const intervalo = setInterval(actualizarCronometro, 1000);
 
-  document.getElementById("dias").textContent = dias.toString().padStart(2,'0');
-  document.getElementById("horas").textContent = horas.toString().padStart(2,'0');
-  document.getElementById("minutos").textContent = minutos.toString().padStart(2,'0');
-  document.getElementById("segundos").textContent = segundos.toString().padStart(2,'0');
-}
+  // ======= MÚSICA =======
+  const playBtn = document.getElementById('playBtn');
+  const audio = new Audio('harold_elena_por_siempre.mp3'); // tu archivo
 
-// Ejecutar inmediatamente
-actualizarCronometro();
-// Luego actualizar cada segundo
-const intervalo = setInterval(actualizarCronometro, 1000);
+  playBtn.addEventListener('click', () => {
+    if(audio.paused){
+      audio.play();
+      playBtn.textContent = "⏸️ Pausar música";
+    } else {
+      audio.pause();
+      playBtn.textContent = "🎵 Reproducir música";
+    }
   });
-const playBtn = document.getElementById('playBtn');
-const audio = new Audio('asiesnuestroamor.mp3'); // tu archivo de música
-
-playBtn.addEventListener('click', () => {
-  audio.play();
 });
-
-
-
-
