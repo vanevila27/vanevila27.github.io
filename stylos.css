@@ -13,10 +13,16 @@ body {
     font-size: 16px;
     padding: 10px 20px;
   }
+
+.portada {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* ocupa toda la pantalla */
+  overflow: hidden;
+}
 .portada img {
   width: 100%;
-  height: 60vh;
-  max-height: none;   /* permitimos que crezca sin límite */
+  height: 100%;
   object-fit: cover;   /* hace que la imagen se recorte sin deformarse */
   display: block;
   margin: 0 auto;
@@ -358,6 +364,7 @@ body {
 .lineas-romanticas p:last-child {
   margin-top: 10px;
 }
+
 
 
 
