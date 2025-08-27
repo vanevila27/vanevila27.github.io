@@ -101,7 +101,7 @@ body {
   background-color: #7a4f61;
 }
 
-/* Carrusel */
+
   /* Carrusel */
 .carrusel-container { position: relative; width: 100%; margin: 40px auto; padding: 0 20px; }
 .carrusel { display: flex; overflow-x: scroll; scroll-snap-type: x mandatory; gap: 10px; transition: all 0.3s ease; }
@@ -372,6 +372,7 @@ body {
 .lineas-romanticas p:last-child {
   margin-top: 10px;
 }
+
 
 
 
