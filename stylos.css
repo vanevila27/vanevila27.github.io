@@ -16,7 +16,7 @@ body {
 .portada img {
   width: 100%;
   height: auto;
-  max-height: 600px;   /* controla lo larga que se ve */
+  max-height: none;   /* permitimos que crezca sin límite */
   object-fit: cover;   /* hace que la imagen se recorte sin deformarse */
   display: block;
   margin: 0 auto;
@@ -38,8 +38,8 @@ body {
 }
 /* Imagen de portada */
 .logo {
-  width: 80%;        /* ahora puede ocupar más del ancho */
-  max-width: 80%;  /* nunca más de 600px para que no se salga de la pantalla */
+  width: 100%;        /* ahora puede ocupar más del ancho */
+  max-width: 100%;  /* nunca más de 600px para que no se salga de la pantalla */
   background-color: #fff1f6;
   height: auto;
   display: block;
@@ -339,6 +339,7 @@ body {
 .playBtn:hover {
   background-color: #7a4f61;
 }
+
 
 
 
