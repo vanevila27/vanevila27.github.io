@@ -87,7 +87,7 @@ body {
 
 /* Botón */
 .boton-ingresar {
-  padding: 10px 20px;
+  padding: 12px 25px;
   background-color: #a14d70;
   color: white;
   border: none;
@@ -372,6 +372,7 @@ body {
 .lineas-romanticas p:last-child {
   margin-top: 10px;
 }
+
 
 
 
