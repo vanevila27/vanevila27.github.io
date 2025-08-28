@@ -65,22 +65,67 @@ document.addEventListener('DOMContentLoaded', function () {
   // Ejecutar inmediatamente y luego cada segundo
   actualizarCronometro();
   const intervalo = setInterval(actualizarCronometro, 1000);
-
- // ======= MÚSICA =======
+// ======= MÚSICA (robusto) =======
 const playBtn = document.getElementById('playBtn');
 const audio = document.getElementById('miAudio');
 
-playBtn.addEventListener('click', () => {
-  const startTime = 10; // empieza desde el segundo 10
-  const stopTime = audio.duration - 20; // termina 20 segundos antes del final
+if (!audio) {
+  console.error('No existe <audio id="miAudio"> en el HTML.');
+}
 
-  audio.currentTime = startTime;
-  audio.play();
+const START_AT = 10;   // empezar en el segundo 10
+const END_OFFSET = 20; // cortar 20s antes del final
 
-  audio.addEventListener('timeupdate', () => {
-    if (audio.currentTime >= stopTime) {
+// Por si hay errores de carga/ruta:
+audio.addEventListener('error', () => {
+  const codes = {1:'ABORTED', 2:'NETWORK', 3:'DECODE', 4:'SRC_NOT_SUPPORTED'};
+  console.error('Error de audio:', audio.error && (codes[audio.error.code] || audio.error.code), audio.currentSrc);
+});
+
+// Evita acumular listeners si el usuario hace muchos clics
+function removeStopListener(fn) {
+  audio.removeEventListener('timeupdate', fn);
+}
+
+playBtn.addEventListener('click', async () => {
+  if (!audio) return;
+
+  // callback para detener antes del final (se quita solo)
+  const stopOnTimeUpdate = () => {
+    const cutoff = Number.isFinite(audio.duration) ? (audio.duration - END_OFFSET) : Infinity;
+    if (audio.currentTime >= cutoff) {
       audio.pause();
       audio.currentTime = 0;
+      removeStopListener(stopOnTimeUpdate);
     }
-  });
+  };
+
+  // Función para iniciar una vez haya metadatos
+  const startPlayback = async () => {
+    // Si la duración ya está disponible, calculamos y hacemos seek seguro
+    try {
+      const dur = audio.duration; // puede ser NaN si aún no hay metadatos
+      const target = Number.isFinite(dur) ? Math.min(START_AT, Math.max(0, dur - 0.1)) : START_AT;
+      audio.currentTime = target; // en algunos navegadores el seek se programa si ya hay metadatos
+    } catch (_) { /* algunos navegadores tiran excepción si no hay metadatos */ }
+
+    // Reproducir con manejo del Promise
+    try {
+      await audio.play();
+    } catch (err) {
+      console.error('No se pudo reproducir. ¿Hubo interacción real? ¿Ruta correcta?', err);
+      return;
+    }
+
+    // Activar corte antes del final
+    audio.addEventListener('timeupdate', stopOnTimeUpdate);
+  };
+
+  // Si ya hay metadatos, reproducimos; si no, esperamos a que estén (una sola vez)
+  if (audio.readyState >= 1) { // HAVE_METADATA
+    startPlayback();
+  } else {
+    audio.addEventListener('loadedmetadata', startPlayback, { once: true });
+    audio.load(); // asegura que empiece a cargar metadatos
+  }
 });
