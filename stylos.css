@@ -4,7 +4,7 @@ body {
   padding: 0;
   background-color: #f9f4f2;
   color: #3e1a31;
-  margin-top: 30px; /* 👈 espacio arriba solo de esta parte */
+  margin-top: 0; /* 👈 espacio arriba solo de esta parte */
   /* Contenedor de música (puede estar en cualquier sección) */
 }
 
@@ -409,6 +409,7 @@ body {
 .lineas-romanticas p:last-child {
   margin-top: 10px;
 }
+
 
 
 
