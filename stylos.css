@@ -1,63 +1,72 @@
+/* ==== BODY ==== */
 body {
   font-family: 'Sacramento', cursive;
-  margin: 0;
+  margin: 0;      /* quitamos margin-top para que la portada toque el borde superior */
   padding: 0;
   background-color: #f9f4f2;
   color: #3e1a31;
-  margin-top: 0; /* 👈 espacio arriba solo de esta parte */
-  /* Contenedor de música (puede estar en cualquier sección) */
 }
 
-@media (max-width: 768px) {
-  .playBtn {
-    font-size: 16px;
-    padding: 10px 20px;   
-  }
+/* ==== PORTADA HERO ==== */
 .portada {
-  width: 100%;
-  height: 90vh; /* casi toda la pantalla */
-  background-image: url('img/WALDO&VANE-1.jpg');
-  background-size: cover;       /* la imagen llena todo el área */
-  background-position: center;  /* centrada */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  text-align: center;
   position: relative;
+  width: 100%;
+  height: 100vh; /* ocupa toda la pantalla */
+  background-image: url('img/WALDO&VANE-1.jpg'); /* tu imagen */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 
+/* Overlay oscuro para mejorar contraste del texto */
+.portada::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.3); /* sombra negra suave */
+  z-index: 1;
+}
+
+/* Contenedor de textos y botón */
 .titulo-container {
-  background: rgba(255, 255, 255, 0.3); /* 💖 fondo suave para destacar texto */
-  padding: 30px 20px;
-  border-radius: 20px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  position: relative;  /* para que esté por encima del overlay */
+  z-index: 2;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  padding: 20px;
 }
 
+/* Texto grande de los novios */
 .titulo-novios {
-  font-family: 'Pinyon Script', cursive;
   font-size: 60px;
-  color: #fff; 
   margin: 0;
-  text-shadow: 0 2px 8px rgba(0,0,0,0.4); /* texto más legible */
-}
-
-.subtitulo {
-  font-family: 'Sacramento', cursive;
-  font-size: 26px;
   color: #fff;
-  margin: 10px 0 20px 0;
-  text-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  text-shadow: 0 2px 10px rgba(0,0,0,0.6);
 }
 
+/* Subtítulo */
+.subtitulo {
+  font-size: 28px;
+  color: #fff;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.6);
+}
+
+/* Botón Ingresar */
 .boton-ingresar {
   padding: 14px 30px;
-  font-size: 18px;
   background-color: #a14d70;
   color: white;
   border: none;
-  border-radius: 12px;
+  border-radius: 10px;
   cursor: pointer;
+  font-size: 1.2rem;
   transition: 0.3s;
 }
 
@@ -65,22 +74,20 @@ body {
   background-color: #7a4f61;
 }
 
-/* Responsive */
+/* Responsive para móviles */
 @media (max-width: 768px) {
-  .titulo-container {
-    padding: 20px 15px;
-  }
   .titulo-novios {
-    font-size: 36px;
+    font-size: 40px;
   }
   .subtitulo {
     font-size: 20px;
   }
   .boton-ingresar {
-    font-size: 16px;
     padding: 12px 25px;
+    font-size: 1rem;
   }
 }
+
 
 
   /* Contenedor del header */
@@ -409,6 +416,7 @@ body {
 .lineas-romanticas p:last-child {
   margin-top: 10px;
 }
+
 
 
 
