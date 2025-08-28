@@ -11,58 +11,79 @@ body {
 @media (max-width: 768px) {
   .playBtn {
     font-size: 16px;
-    padding: 10px 20px;
-    
+    padding: 10px 20px;   
   }
-
-
 .portada {
   width: 100%;
-  height: 90vh; /* altura más grande que antes */
+  height: 90vh; /* casi toda la pantalla */
   background-image: url('img/WALDO&VANE-1.jpg');
-  background-size: cover;       /* ocupa todo sin deformar */
-  background-position: center;  /* centrado */
+  background-size: cover;       /* la imagen llena todo el área */
+  background-position: center;  /* centrada */
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  text-align: center;
+  position: relative;
 }
 
-.portada img {
-  width: 100%;
-  height: 400%;
-  object-fit: cover;   /* hace que la imagen se recorte sin deformarse */
-  display: block;
-  margin: 0 auto;
-  border-radius:12px;/* bordes redondeados para la imagen principal*/
+.titulo-container {
+  background: rgba(255, 255, 255, 0.3); /* 💖 fondo suave para destacar texto */
+  padding: 30px 20px;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
-  
- .invitacion {
-  margin-bottom: 20px; /* espacio debajo de la invitación */
+.titulo-novios {
+  font-family: 'Pinyon Script', cursive;
+  font-size: 60px;
+  color: #fff; 
+  margin: 0;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.4); /* texto más legible */
 }
 
+.subtitulo {
+  font-family: 'Sacramento', cursive;
+  font-size: 26px;
+  color: #fff;
+  margin: 10px 0 20px 0;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
 
-.invitacion img {
-  width: 100%;
-  height:auto; /* ajustá a lo que quieras */
-  object-fit: cover; /* recorta sin deformar */
-  display: block;
-  margin: 0 auto;
+.boton-ingresar {
+  padding: 14px 30px;
+  font-size: 18px;
+  background-color: #a14d70;
+  color: white;
+  border: none;
   border-radius: 12px;
-}
-/* Imagen de portada */
-.logo {
-  width: 80%;        /* ahora puede ocupar más del ancho */
-  max-width: 500px;  /* nunca más de 600px para que no se salga de la pantalla */
-  background-color: #fff1f6;
-  height: auto;
-  display: block;
-  margin:0 auto 20px auto; /*más aire arriba y abajo */
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  cursor: pointer;
+  transition: 0.3s;
 }
 
-/* Contenedor del header */
+.boton-ingresar:hover {
+  background-color: #7a4f61;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .titulo-container {
+    padding: 20px 15px;
+  }
+  .titulo-novios {
+    font-size: 36px;
+  }
+  .subtitulo {
+    font-size: 20px;
+  }
+  .boton-ingresar {
+    font-size: 16px;
+    padding: 12px 25px;
+  }
+}
+
+
+  /* Contenedor del header */
 .titulo-container {
   text-align: center;
   display: flex;
@@ -102,6 +123,21 @@ body {
   background-color: #7a4f61;
 }
 
+
+
+ .invitacion {
+  margin-bottom: 20px; /* espacio debajo de la invitación */
+}
+
+
+.invitacion img {
+  width: 100%;
+  height:auto; /* ajustá a lo que quieras */
+  object-fit: cover; /* recorta sin deformar */
+  display: block;
+  margin: 0 auto;
+  border-radius: 12px;
+}
 
   /* Carrusel */
 .carrusel-container { position: relative; width: 100%; margin: 40px auto; padding: 0 20px; }
@@ -373,6 +409,7 @@ body {
 .lineas-romanticas p:last-child {
   margin-top: 10px;
 }
+
 
 
 
