@@ -66,26 +66,21 @@ document.addEventListener('DOMContentLoaded', function () {
   actualizarCronometro();
   const intervalo = setInterval(actualizarCronometro, 1000);
 
-  // ======= MÚSICA =======
-  const playBtn = document.getElementById('playBtn');
-  const audio = new Audio('harold_elena_por_siempre.mp3'); // tu archivo de música
+ // ======= MÚSICA =======
+const playBtn = document.getElementById('playBtn');
+const audio = document.getElementById('miAudio');
 
-  playBtn.addEventListener('click', () => {
-    audio.addEventListener('loadedmetadata', () => {
-      const startTime = 10; // empieza desde el segundo 10
-      const stopTime = audio.duration - 20; // termina 20 segundos antes del final
+playBtn.addEventListener('click', () => {
+  const startTime = 10; // empieza desde el segundo 10
+  const stopTime = audio.duration - 20; // termina 20 segundos antes del final
 
-      audio.currentTime = startTime;
-      audio.play();
+  audio.currentTime = startTime;
+  audio.play();
 
-      // Control para detener la música antes del final
-      audio.addEventListener('timeupdate', () => {
-        if (audio.currentTime >= stopTime) {
-          audio.pause();
-          audio.currentTime = 0; // opcional: reinicia al principio
-        }
-      });
-    });
+  audio.addEventListener('timeupdate', () => {
+    if (audio.currentTime >= stopTime) {
+      audio.pause();
+      audio.currentTime = 0;
+    }
   });
 });
-
