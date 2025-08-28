@@ -12,13 +12,14 @@ body {
   .playBtn {
     font-size: 16px;
     padding: 10px 20px;
+    
   }
 
 
 .portada {
   position: relative;
   width: 100%;
-  height: 100vh; /* ocupa toda la pantalla */
+  height: 90vh; /* ocupa toda la pantalla */
   overflow: hidden;
 }
 .portada img {
@@ -27,7 +28,7 @@ body {
   object-fit: cover;   /* hace que la imagen se recorte sin deformarse */
   display: block;
   margin: 0 auto;
-  border-radius:12px;
+  border-radius:12px;/* bordes redondeados para la imagen principal*/
 }
 
   
@@ -47,11 +48,11 @@ body {
 /* Imagen de portada */
 .logo {
   width: 100%;        /* ahora puede ocupar más del ancho */
-  max-width: 100%;  /* nunca más de 600px para que no se salga de la pantalla */
+  max-width: 350px;  /* nunca más de 600px para que no se salga de la pantalla */
   background-color: #fff1f6;
   height: auto;
   display: block;
-  margin: 0 auto 15px auto;
+  margin: 20px auto; /*más aire arriba y abajo */
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.08);
 }
@@ -69,18 +70,20 @@ body {
 
 /* Texto */
 .titulo-novios {
-  font-size: 36px; /* más pequeño para que acompañe la imagen */
-  margin: 0;
+  font-size: 48px; /* más  grande */
+  margin: 10px 0;
 }
 
 .subtitulo {
-  font-size: 20px;
+  font-size: 22px;
   color: #a14d70;
+  margin-bottom: 20px;
 }
 
 /* Botón */
 .boton-ingresar {
-  padding: 12px 25px;
+  padding: 14px 30px;
+  margin-top: 15px;
   background-color: #a14d70;
   color: white;
   border: none;
@@ -365,6 +368,7 @@ body {
 .lineas-romanticas p:last-child {
   margin-top: 10px;
 }
+
 
 
 
