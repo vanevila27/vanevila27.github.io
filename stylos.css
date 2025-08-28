@@ -183,32 +183,32 @@ body {
 /* Horarios */
 .Horarios {
   text-align: center;
-  padding: 15px 10px; /* 👈 menos padding */
+  padding: 20px 15px; /* 👈 menos padding */
   background-color: #fff7fa; /* 👈 color diferente al body */
   border-radius: 20px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.08);
   margin: 20px auto; /* 👈 menos espacio entre secciones */
-  max-width: 800px;
+  max-width: 700px;
 }
   
   
 .Horarios h2 {
-  font-size: 60px; /* un poco más chico que antes para no desproporcionar */
+  font-size: 40px; /* un poco más chico que antes para no desproporcionar */
   font-family: 'Pinyon Script', cursive;
   color: #a14d70;
   font-weight: normal;
-  margin: 15px 0 10px;
+  margin: 10px 0 8px;
   border-bottom: 2px solid #eac7d4;
   display: inline-block;
   padding-bottom: 4px;
 }
 .Horarios p {
-  font-size: 34px; /* 👈 agrandado */
+  font-size: 24px; /* 👈 agrandado */
   font-family: 'Sacramento', cursive;
   color: #7a4f61;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
-.Horarios img { width: 100%; max-width: 600px; height: auto; display: block; margin: 30px auto; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); opacity: 0.8; }
+.Horarios img { width: 100%; max-width: 450px; height: auto; display: block; margin: 15px auto; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); opacity: 0.9; }
 
 /* Ubicación */
 .ubicacion {
@@ -368,6 +368,7 @@ body {
 .lineas-romanticas p:last-child {
   margin-top: 10px;
 }
+
 
 
 
