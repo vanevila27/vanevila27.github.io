@@ -4,6 +4,7 @@ const carrusel = document.querySelector('.carrusel');
 const imagenes = document.querySelectorAll('.carrusel img');
 const puntosContainer = document.getElementById('puntos');
 let currentIndex = 0;
+}
 
 // Crear los puntos
   imagenes.forEach((_, index) => {
@@ -105,6 +106,7 @@ function iniciarMusica() {
   audio.addEventListener('timeupdate', stopOnTimeUpdate);
 }
 });
+
 
 
 
