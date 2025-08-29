@@ -33,41 +33,63 @@ header.portada::before {
   z-index: 0;
 }
 
-/* Contenedor del título */
+
+/* Contenedor del header */
 .titulo-container {
   text-align: center;
-  color: white;
-  z-index: 1; /* Asegura que el texto esté por encima de la imagen */
-  padding: 20px 30px;
-  background: rgba(255, 255,255, 0.8); /* fondo semitransparente romántico */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 10px;
+  gap: 10px;
+  background-color: rgba(255, 255, 255, 0.6); /* fondo blanco semitransparente */
   border-radius: 15px;
-  display:inline-block;
 }
 
-/* Estilo para el título */
+/* Título principal */
 .titulo-novios {
-  font-size: 4rem;
+  font-size: 48px;
   font-family: 'Sacramento', cursive;
-  margin: 0;
+  margin: 10px 0;
+  color: #3e1a31; /* texto oscuro */
   text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
 }
 
-/* Estilo para el subtítulo */
+/* Subtítulo */
 .subtitulo {
-  display:block;
-  font-size: 35px;
+  display: block;
+  font-size: 24px;
   font-family: 'Sacramento', cursive;
-  margin-top: 10px;
   font-weight: bold;
+  margin-bottom: 20px;
+  color: #3e1a31; /* oscuro para contraste */
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
-  color: #3e1a31; /* 👈 texto oscuro para buen contraste */
+}
+
+/* Botón */
+.boton-ingresar {
+  padding: 14px 30px;
+  margin-top: 15px;
+  background-color: rgba(255, 255, 255, 0.8); /* blanco semitransparente */
+  color: #3e1a31; /* texto oscuro */
+  border: 2px solid #3e1a31;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: background 0.3s, color 0.3s;
+}
+
+.boton-ingresar:hover {
+  background-color: #ffffff; /* blanco sólido */
+  color: #3e1a31;
 }
 
 /* Responsive portada */
 @media (max-width: 768px) {
   header.portada {
     height: 100vh;
-    background-position: center center; /* centra mejor en celulares */
+    background-position: center center;
   }
   .titulo-novios {
     font-size: 2.5rem;
@@ -80,64 +102,7 @@ header.portada::before {
     padding: 10px 20px;
   }
 }
-/* Estilo para el botón */
-.boton-ingresar {
-  padding: 14px 30px;
-  margin-top: 20px;
-  background-color: #a14d70;
-  color: white;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  font-size: 1.2rem;
-  transition: 0.3s;
-}
 
-.boton-ingresar:hover {
-  background-color: #7a4f61;
-}
-
-
-
-  /* Contenedor del header */
-.titulo-container {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 20px 10px; /* menos padding para que no se vea gigante */
-  gap: 10px;           /* espacio entre elementos */
-}
-
-/* Texto */
-.titulo-novios {
-  font-size: 48px; /* más  grande */
-  margin: 10px 0;
-}
-
-.subtitulo {
-  font-size: 22px;
-  color: #a14d70;
-  margin-bottom: 20px;
-}
-
-/* Botón */
-.boton-ingresar {
-  padding: 14px 30px;
-  margin-top: 15px;
-  background-color: #a14d70;
-  color: white;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  font-size: 1.2rem;
-  transition: 0.3s;
-}
-
-.boton-ingresar:hover {
-  background-color: #7a4f61;
-}
 
 
 
@@ -425,6 +390,7 @@ header.portada::before {
 .lineas-romanticas p:last-child {
   margin-top: 10px;
 }
+
 
 
 
