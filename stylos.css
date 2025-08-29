@@ -53,11 +53,12 @@ header.portada::before {
 
 /* Estilo para el subtítulo */
 .subtitulo {
-  font-size: 2rem;
+  display:block;
+  font-size: 24px;
   font-family: 'Sacramento', cursive;
   margin-top: 10px;
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
-   color: #fff; /* 👈 letras blancas */
+  color: #3e1a31;; /* 👈 texto oscuro para buen contraste */
 }
 
 /* Responsive portada */
@@ -422,6 +423,7 @@ header.portada::before {
 .lineas-romanticas p:last-child {
   margin-top: 10px;
 }
+
 
 
 
