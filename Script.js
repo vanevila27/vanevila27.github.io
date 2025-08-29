@@ -41,12 +41,13 @@ puntos.forEach((p, i) => p.classList.toggle('activo', i
 
 // ======= CRONÓMETRO =======
 const fechaBoda = new Date("2025-10-11T18:30:00").getTime();
+  
 function actualizarCronometro() { 
 const ahora = new Date().getTime();
 const distancia = fechaBoda - ahora;
 
-if (distancia <= 0) { document.getElementById("timer").innerHTML =
-"¡Hoy es nuestra boda! 💍"; 
+if (distancia <= 0) {
+document.getElementById("timer").innerHTML ="¡Hoy es nuestra boda! 💍"; 
 clearInterval(intervalo);
 return;
 }
@@ -62,7 +63,8 @@ document.getElementById("minutos").textContent = minutos.toString().padStart(2, 
 document.getElementById("segundos").textContent = segundos.toString().padStart(2, '0'); 
 }
 
-// Ejecutar inmediatamente y luego cada segundo actualizarCronometro();
+// Ejecutar inmediatamente y luego cada segundo 
+  actualizarCronometro();
   const intervalo = setInterval(actualizarCronometro, 1000);
   
 // ======= MÚSICA =======
@@ -102,6 +104,7 @@ function iniciarMusica() {
   };
   audio.addEventListener('timeupdate', stopOnTimeUpdate);
 }
+
 
 
 
