@@ -57,8 +57,9 @@ header.portada::before {
   font-size: 24px;
   font-family: 'Sacramento', cursive;
   margin-top: 10px;
+  font-weight: bold;
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
-  color: #3e1a31;; /* 👈 texto oscuro para buen contraste */
+  color: #3e1a31; /* 👈 texto oscuro para buen contraste */
 }
 
 /* Responsive portada */
@@ -423,6 +424,7 @@ header.portada::before {
 .lineas-romanticas p:last-child {
   margin-top: 10px;
 }
+
 
 
 
