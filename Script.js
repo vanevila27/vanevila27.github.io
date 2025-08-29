@@ -104,6 +104,8 @@ function iniciarMusica() {
   };
   audio.addEventListener('timeupdate', stopOnTimeUpdate);
 }
+});
+
 
 
 
