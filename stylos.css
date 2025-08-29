@@ -38,9 +38,10 @@ header.portada::before {
   text-align: center;
   color: white;
   z-index: 1; /* Asegura que el texto esté por encima de la imagen */
-  padding: 20px;
+  padding: 20px 30px;
   background: rgba(255, 255,255, 0.8); /* fondo semitransparente romántico */
-  border-radius: 12px;
+  border-radius: 15px;
+  display:inline-block;
 }
 
 /* Estilo para el título */
@@ -424,6 +425,7 @@ header.portada::before {
 .lineas-romanticas p:last-child {
   margin-top: 10px;
 }
+
 
 
 
