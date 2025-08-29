@@ -39,7 +39,7 @@ header.portada::before {
   color: white;
   z-index: 1; /* Asegura que el texto esté por encima de la imagen */
   padding: 20px;
-  background: rgba(161, 77, 112, 0.3); /* fondo semitransparente romántico */
+  background: rgba(255, 255,255, 0.8); /* fondo semitransparente romántico */
   border-radius: 12px;
 }
 
@@ -422,6 +422,7 @@ header.portada::before {
 .lineas-romanticas p:last-child {
   margin-top: 10px;
 }
+
 
 
 
