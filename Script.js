@@ -41,32 +41,35 @@ puntos.forEach((p, i) => p.classList.toggle('activo', i
 });
 
 // ======= CRONÓMETRO =======
-const fechaBoda = new Date("2025-10-11T18:30:00").getTime();
-  
-function actualizarCronometro() { 
-const ahora = new Date().getTime();
-const distancia = fechaBoda - ahora;
+document.addEventListener('DOMContentLoaded', function () {
+  // Fecha de la boda (ajustá si querés otra hora o día)
+  const fechaBoda = new Date("2025-10-11T18:30:00").getTime();
 
-if (distancia <= 0) {
-document.getElementById("timer").innerHTML ="¡Hoy es nuestra boda! 💍"; 
-clearInterval(intervalo);
-return;
-}
+  function actualizarCronometro() {
+    const ahora = new Date().getTime();
+    const distancia = fechaBoda - ahora;
 
-const dias = Math.floor(distancia / (1000 * 60 * 60 * 24));
-const horas = Math.floor((distancia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-const minutos = Math.floor((distancia % (1000 * 60 * 60)) / (1000 * 60));
-const segundos = Math.floor((distancia % (1000 * 60)) / 1000);
+    if (distancia <= 0) {
+      document.getElementById("timer").innerHTML = "¡Hoy es nuestra boda! 💍";
+      clearInterval(intervalo);
+      return;
+    }
 
-document.getElementById("dias").textContent = dias.toString().padStart(2, '0');
-document.getElementById("horas").textContent = horas.toString().padStart(2, '0');
-document.getElementById("minutos").textContent = minutos.toString().padStart(2, '0');
-document.getElementById("segundos").textContent = segundos.toString().padStart(2, '0'); 
-}
+    const dias = Math.floor(distancia / (1000 * 60 * 60 * 24));
+    const horas = Math.floor((distancia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutos = Math.floor((distancia % (1000 * 60 * 60)) / (1000 * 60));
+    const segundos = Math.floor((distancia % (1000 * 60)) / 1000);
 
-// Ejecutar inmediatamente y luego cada segundo 
-  actualizarCronometro();
-  const intervalo = setInterval(actualizarCronometro, 1000);
+    document.getElementById("dias").textContent = dias.toString().padStart(2, '0');
+    document.getElementById("horas").textContent = horas.toString().padStart(2, '0');
+    document.getElementById("minutos").textContent = minutos.toString().padStart(2, '0');
+    document.getElementById("segundos").textContent = segundos.toString().padStart(2, '0');
+  }
+
+  actualizarCronometro(); // 👈 corre apenas carga
+  const intervalo = setInterval(actualizarCronometro, 1000); // 👈 se actualiza cada segundo
+});
+
   
 // ======= MÚSICA =======
 const playBtn = document.getElementById('playBtn');
@@ -106,6 +109,7 @@ function iniciarMusica() {
   audio.addEventListener('timeupdate', stopOnTimeUpdate);
 }
 });
+
 
 
 
