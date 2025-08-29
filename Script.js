@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   actualizarCronometro(); // corre apenas carga
-  intervalo = setInterval(actualizarCronometro, 1000); // se actualiza cada segundo
+  intervalo = setInterval(actualizarCronometro, 1000);
 
   // ======= MÚSICA =======
   const playBtn = document.getElementById('playBtn');
@@ -94,9 +94,6 @@ document.addEventListener('DOMContentLoaded', function () {
     audio.addEventListener('timeupdate', stopOnTimeUpdate);
   }
 });
-
-
-
 
 
 
