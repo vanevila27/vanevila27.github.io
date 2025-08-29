@@ -1,48 +1,43 @@
 document.addEventListener('DOMContentLoaded', function () {
-// ======= CARRUSEL =======
-const carrusel = document.querySelector('.carrusel');  
-const imagenes = document.querySelectorAll('.carrusel img');
-const puntosContainer = document.getElementById('puntos');
-let currentIndex = 0;
+  // ======= CARRUSEL =======
+  const carrusel = document.querySelector('.carrusel');  
+  const imagenes = document.querySelectorAll('.carrusel img');
+  const puntosContainer = document.getElementById('puntos');
+  let currentIndex = 0;
 
-
-// Crear los puntos
+  // Crear los puntos
   imagenes.forEach((_, index) => {
-  const punto = document.createElement('span'); 
-  punto.classList.add('punto');
-  if (index === 0) punto.classList.add('activo');
-  punto.addEventListener('click', () => {
-  currentIndex = index;
-  moverCarrusel(index); 
-  actualizarPuntos();
-  });
-  puntosContainer.appendChild(punto);
+    const punto = document.createElement('span'); 
+    punto.classList.add('punto');
+    if (index === 0) punto.classList.add('activo');
+    punto.addEventListener('click', () => {
+      currentIndex = index;
+      moverCarrusel(index); 
+      actualizarPuntos();
+    });
+    puntosContainer.appendChild(punto);
   });
 
   const puntos = document.querySelectorAll('.punto');
 
   function moverCarrusel(index) { 
-  const imagenAncho = imagenes[0].offsetWidth;
-  carrusel.scrollLeft = imagenAncho * index; 
+    const imagenAncho = imagenes[0].offsetWidth;
+    carrusel.scrollLeft = imagenAncho * index; 
   }
 
   function actualizarPuntos() { 
-  puntos.forEach((p, i) => {
-  p.classList.toggle('activo', i === currentIndex);
-  }); 
+    puntos.forEach((p, i) => {
+      p.classList.toggle('activo', i === currentIndex);
+    }); 
   }
-  
- // Actualizar puntos al hacer scroll manual
-carrusel.addEventListener('scroll', () => {
-const index = Math.round(carrusel.scrollLeft /
-carrusel.offsetWidth);
-puntos.forEach((p, i) => p.classList.toggle('activo', i
-=== index));
-});
 
-// ======= CRONÓMETRO =======
-document.addEventListener('DOMContentLoaded', function () {
-  // Fecha de la boda (ajustá si querés otra hora o día)
+  // Actualizar puntos al hacer scroll manual
+  carrusel.addEventListener('scroll', () => {
+    const index = Math.round(carrusel.scrollLeft / carrusel.offsetWidth);
+    puntos.forEach((p, i) => p.classList.toggle('activo', i === index));
+  });
+
+  // ======= CRONÓMETRO =======
   const fechaBoda = new Date("2025-10-11T18:30:00").getTime();
 
   function actualizarCronometro() {
@@ -66,49 +61,42 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById("segundos").textContent = segundos.toString().padStart(2, '0');
   }
 
-  actualizarCronometro(); // 👈 corre apenas carga
-  const intervalo = setInterval(actualizarCronometro, 1000); // 👈 se actualiza cada segundo
-});
+  actualizarCronometro();
+  const intervalo = setInterval(actualizarCronometro, 1000);
 
-  
-// ======= MÚSICA =======
-const playBtn = document.getElementById('playBtn');
-const audio = document.getElementById('audio'); // 👈 coincide con tu HTML
+  // ======= MÚSICA =======
+  const playBtn = document.getElementById('playBtn');
+  const audio = document.getElementById('audio');
 
-const START_AT = 10;   // empieza desde el segundo 10
-const END_OFFSET = 20; // termina 20s antes del final
+  const START_AT = 10;   
+  const END_OFFSET = 20; 
 
-playBtn.addEventListener('click', () => {
-  // esperar a que se carguen los metadatos (duración, etc.)
-  if (audio.readyState >= 1) {
-    iniciarMusica();
-  } else {
-    audio.addEventListener('loadedmetadata', iniciarMusica, { once: true });
-    audio.load();
+  playBtn.addEventListener('click', () => {
+    if (audio.readyState >= 1) {
+      iniciarMusica();
+    } else {
+      audio.addEventListener('loadedmetadata', iniciarMusica, { once: true });
+      audio.load();
+    }
+  });
+
+  function iniciarMusica() {
+    const stopTime = audio.duration - END_OFFSET;
+    audio.currentTime = Math.min(START_AT, audio.duration - 0.1);
+    audio.play().catch(err => console.error("No se pudo reproducir el audio:", err));
+
+    const stopOnTimeUpdate = () => {
+      if (audio.currentTime >= stopTime) {
+        audio.pause();
+        audio.currentTime = 0;
+        audio.removeEventListener('timeupdate', stopOnTimeUpdate);
+      }
+    };
+    audio.addEventListener('timeupdate', stopOnTimeUpdate);
   }
 });
 
-function iniciarMusica() {
-  const stopTime = audio.duration - END_OFFSET;
 
-  // saltar al segundo 10 (o al máximo disponible)
-  audio.currentTime = Math.min(START_AT, audio.duration - 0.1);
-
-  audio.play().catch(err => {
-    console.error("No se pudo reproducir el audio:", err);
-  });
-
-  // detener 20s antes del final
-  const stopOnTimeUpdate = () => {
-    if (audio.currentTime >= stopTime) {
-      audio.pause();
-      audio.currentTime = 0;
-      audio.removeEventListener('timeupdate', stopOnTimeUpdate);
-    }
-  };
-  audio.addEventListener('timeupdate', stopOnTimeUpdate);
-}
-});
 
 
 
