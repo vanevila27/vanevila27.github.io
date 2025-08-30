@@ -77,7 +77,7 @@ header.portada::before {
   border: 2px solid #ce0584;
   border-radius: 20px;  /* más redondeado */
   cursor: pointer;
-  font-size: 1.6rem;    /* texto más grande */
+  font-size: 1.9rem;    /* texto más grande */
   font-weight: bold;    /* más marcado */
   transition: background 0.3s, color 0.3s, transform 0.2s;
 }
@@ -394,6 +394,7 @@ header.portada::before {
 .lineas-romanticas p:last-child {
   margin-top: 10px;
 }
+
 
 
 
