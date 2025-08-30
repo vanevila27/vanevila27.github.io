@@ -68,23 +68,26 @@ header.portada::before {
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
 }
 
-/* Botón */
 .boton-ingresar {
-  padding: 14px 30px;
-  margin-top: 15px;
-  background-color: rgba(255, 255, 255, 0.8); /* blanco semitransparente */
-  color: #ce0584; /* texto oscuro */
+  display: inline-block;
+  padding: 20px 50px;   /* más espacio interno */
+  margin-top: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #ce0584;
   border: 2px solid #ce0584;
-  border-radius: 12px;
+  border-radius: 20px;  /* más redondeado */
   cursor: pointer;
-  font-size: 1.2rem;
-  transition: background 0.3s, color 0.3s;
+  font-size: 1.6rem;    /* texto más grande */
+  font-weight: bold;    /* más marcado */
+  transition: background 0.3s, color 0.3s, transform 0.2s;
 }
 
 .boton-ingresar:hover {
-  background-color: #ffffff; /* blanco sólido */
-  color: #3e1a31;
+  background-color: #ce0584;
+  color: white;
+  transform: scale(1.05); /* efecto al pasar el mouse */
 }
+
 
 /* Responsive portada */
 @media (max-width: 768px) {
@@ -391,6 +394,7 @@ header.portada::before {
 .lineas-romanticas p:last-child {
   margin-top: 10px;
 }
+
 
 
 
